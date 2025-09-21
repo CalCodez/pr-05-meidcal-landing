@@ -22,8 +22,6 @@ function toggleMobileMenu() {
 	const mobileMenu = getById('mobile-menu');
 	const activeMenu = 'mobile-menu-active';
 	const mobileLinks = selectAll('.mobile-nav-links');
-	const togglerColorLight = 'var(--font-color-light)';
-	const togglerColorDark = 'var(--font-color-dark)';
 
 	menuToggler.addEventListener(click, () => {
 		if (!mobileMenu.classList.contains(activeMenu)) {
@@ -33,13 +31,11 @@ function toggleMobileMenu() {
 					toggleClass(link, flexActive);
 				}, 200);
 			}
-			menuToggler.style.color = 'var(--font-color-light)';
 		} else {
 			for (let link of mobileLinks) {
 				toggleClass(link, flexActive);
 			}
 			toggleClass(mobileMenu, activeMenu);
-			menuToggler.style.color = 'var(--font-color-dark)';
 		}
 	});
 }
