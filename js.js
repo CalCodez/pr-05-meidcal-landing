@@ -14,3 +14,6 @@ const click = 'click';
 const keyup = 'keyup';
 const flexActive = 'flex-active';
 const flexInactive = 'flex-inactive';
+
+let width = window.innerWidth;
+console.log(width);
