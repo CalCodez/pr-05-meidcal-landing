@@ -102,7 +102,7 @@ body {
 }
 
 #menu-toggler {
-	display: none;
+	display: flex;
 }
 
 .mobile-menu {
@@ -120,14 +120,15 @@ body {
 	right: 10px;
 	top: -5px;
 	border: 4px outset var(--font-color-dark);
-	background: linear-gradient(
-		rgba(212, 216, 221, 0.5),
-		rgba(212, 216, 221, 0.5),
-		rgba(212, 216, 221, 0.5),
-		rgba(212, 216, 221, 0.5),
-		rgba(212, 216, 221, 0.5),
+	background: conic-gradient(
+		rgba(26, 45, 66, 0.7),
+		rgba(212, 216, 221, 0.4),
 		rgba(26, 45, 66, 0.5),
-		rgba(26, 45, 66, 0.9)
+		rgba(26, 45, 66, 0.5),
+		rgba(26, 45, 66, 0.5),
+		rgba(26, 45, 66, 0.5),
+		rgba(26, 45, 66, 0.5),
+		rgba(26, 45, 66, 0.7) /* rgba(26, 45, 66, 0.7), */ /* rgba(26, 45, 66, 0.9) */
 	);
 	row-gap: 20px;
 
@@ -137,7 +138,7 @@ body {
 
 .mobile-nav-links {
 	display: none;
-	color: var(--font-color-dark);
+	color: var(--font-color-main);
 	width: 80%;
 	height: 40px;
 	place-items: center;
