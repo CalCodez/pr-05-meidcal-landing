@@ -55,3 +55,11 @@
 	font-weight: 600;
 	justify-self: center;
 }
+
+.flex-active {
+	display: flex;
+}
+
+.flex-inactive {
+	display: none;
+}

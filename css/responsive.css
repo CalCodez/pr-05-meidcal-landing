@@ -1,0 +1,17 @@
+@media (max-width: 1024px) {
+	.nav-bar {
+		display: none;
+	}
+
+	#menu-toggler {
+		display: flex;
+		color: var(--font-color-dark);
+		font-size: 25px;
+		position: absolute;
+		z-index: 2;
+		right: 20px;
+		cursor: pointer;
+		text-shadow: 1px 1px 1px var(--font-color-dark);
+		top: 5px;
+	}
+}

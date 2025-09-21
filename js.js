@@ -15,5 +15,33 @@ const keyup = 'keyup';
 const flexActive = 'flex-active';
 const flexInactive = 'flex-inactive';
 
-let width = window.innerWidth;
-console.log(width);
+//Mobile Menu Vars and Functions
+
+function toggleMobileMenu() {
+	const menuToggler = getById('menu-toggler');
+	const mobileMenu = getById('mobile-menu');
+	const activeMenu = 'mobile-menu-active';
+	const mobileLinks = selectAll('.mobile-nav-links');
+	const togglerColorLight = 'var(--font-color-light)';
+	const togglerColorDark = 'var(--font-color-dark)';
+
+	menuToggler.addEventListener(click, () => {
+		if (!mobileMenu.classList.contains(activeMenu)) {
+			toggleClass(mobileMenu, activeMenu);
+			for (let link of mobileLinks) {
+				setTimeout(() => {
+					toggleClass(link, flexActive);
+				}, 200);
+			}
+			menuToggler.style.color = 'var(--font-color-light)';
+		} else {
+			for (let link of mobileLinks) {
+				toggleClass(link, flexActive);
+			}
+			toggleClass(mobileMenu, activeMenu);
+			menuToggler.style.color = 'var(--font-color-dark)';
+		}
+	});
+}
+
+toggleMobileMenu();
