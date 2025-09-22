@@ -68,6 +68,7 @@ body {
 	font-size: 5rem;
 	color: #1a2d42;
 	text-shadow: 1px 1px 8px #d4d8dd;
+	font-family: 'Hello Bonia Serif', sans-serif;
 }
 
 .nav-bar {
@@ -102,7 +103,7 @@ body {
 }
 
 #menu-toggler {
-	display: flex;
+	display: none;
 }
 
 .mobile-menu {

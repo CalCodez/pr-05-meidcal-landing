@@ -15,7 +15,7 @@
 }
 
 .hero-text-container,
-.hero-sub-container {
+.hero-image-container {
 	flex-direction: column;
 	display: flex;
 	height: 700px;
@@ -54,6 +54,37 @@
 	font-size: 15px;
 	font-weight: 600;
 	justify-self: center;
+}
+
+.hero-image-container {
+	/* outline: var(--ol); */
+	justify-content: space-around;
+}
+
+.facility-img-container {
+	width: 95%;
+	height: 75%;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.facility-img-container > img {
+	width: 100%;
+	height: 100%;
+}
+
+.facility-social-container {
+	width: 100%;
+	height: 10%;
+	font-size: 2rem;
+	color: var(--font-color-main);
+	text-shadow: 4px 4px 4px var(--font-color-dark);
+	justify-content: space-evenly;
+}
+
+.facility-social-container > i:hover {
+	transform: scale(1.1);
+	cursor: pointer;
 }
 
 .flex-active {
