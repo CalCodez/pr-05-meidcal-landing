@@ -86,8 +86,8 @@
 .services-banner {
 	height: 100px;
 	width: 100%;
-	/* border: 2px inset var(--project-color-dark); */
-	justify-content: space-between;
+	justify-content: center;
+	margin-bottom: 30px;
 }
 
 .services-header-text {
@@ -96,7 +96,7 @@
 	place-content: center;
 	height: 90px;
 	padding-left: 10px;
-	font-size: 3rem;
+	font-size: 4rem;
 	font-family: 'Hello Bonia Serif', sans-serif;
 }
 
@@ -104,6 +104,7 @@
 	height: 90px;
 	width: 500px;
 	justify-content: space-evenly;
+	display: none;
 }
 
 .services-toggle-container > .btn {
@@ -124,8 +125,10 @@
 .services-cards-wrapper {
 	width: 100%;
 	height: auto;
-	justify-content: space-around;
 	padding: 10px 0;
+	flex-wrap: wrap;
+
+	gap: 70px;
 }
 
 .service-card {
