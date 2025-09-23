@@ -29,6 +29,7 @@ html {
 	width: 100%;
 	background-color: var(--main-bg-color);
 	padding: 20px 0;
+	height: auto;
 }
 
 body {
@@ -39,7 +40,6 @@ body {
 	max-width: 1559px;
 	min-width: 320px;
 	height: auto;
-	/* outline: var(--olY); */
 }
 
 .container {
@@ -54,7 +54,7 @@ body {
 	height: auto;
 	padding: 8px;
 	justify-self: flex-start;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	margin-bottom: 20px;
 	position: relative;
 }
@@ -150,4 +150,9 @@ body {
 .main-nav-links:hover,
 .mobile-nav-links:hover {
 	transform: scale(1.1);
+}
+section {
+	height: auto;
+	margin-bottom: 50px;
+	flex-wrap: wrap;
 }

@@ -14,4 +14,34 @@
 		text-shadow: 1px 1px 1px var(--font-color-dark);
 		top: 5px;
 	}
+
+	.hero-section {
+		justify-content: center;
+	}
+	.hero-text-container,
+	.hero-image-container {
+		width: 500px;
+		height: 500px;
+	}
+}
+
+@media (max-width: 467px) {
+	#menu-toggler {
+		top: 45px;
+	}
+
+	.mobile-menu-active {
+		top: 35px;
+	}
+	.logo-nav-container,
+	.logo-container {
+		justify-content: flex-start;
+	}
+}
+
+@media (max-width: 320px) {
+	.logo-text,
+	.hero-text {
+		font-size: 3rem;
+	}
 }
