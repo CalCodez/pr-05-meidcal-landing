@@ -23,8 +23,8 @@
 
 .hero-text {
 	font-size: 5rem;
-	color: #1a2d42;
-	text-shadow: 1px 1px 8px #d4d8dd;
+	color: var(--project-color-dark);
+	text-shadow: 1px 1px 8px var(--project-color-light);
 	margin-top: 15px;
 }
 
@@ -35,19 +35,19 @@
 
 .hero-slogan-text {
 	font-size: 2rem;
-	color: var(--font-color-main);
+	color: var(--project-color-light);
 	margin-bottom: 15px;
 }
 
 .btn {
 	background-color: var(--accent-blue);
-	color: var(--font-color-main);
+	color: var(--project-color-light);
 	width: 120px;
 	height: 40px;
 	border-radius: 15px;
-	border: 1px solid var(--font-color-dark);
-	box-shadow: 1px 1px 5px 1px var(--font-color-dark);
-	color: var(--font-color-main);
+	border: 1px solid var(--project-color-dark);
+	box-shadow: 1px 1px 5px 1px var(--project-color-dark);
+	color: var(--project-color-light);
 	font-size: 15px;
 	font-weight: 600;
 	justify-self: center;
@@ -74,8 +74,8 @@
 	width: 100%;
 	height: 10%;
 	font-size: 2rem;
-	color: var(--font-color-main);
-	text-shadow: 4px 4px 4px var(--font-color-dark);
+	color: var(--project-color-light);
+	text-shadow: 4px 4px 4px var(--project-color-dark);
 	justify-content: space-evenly;
 }
 

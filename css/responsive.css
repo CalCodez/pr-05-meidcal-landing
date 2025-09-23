@@ -5,13 +5,13 @@
 
 	#menu-toggler {
 		display: flex;
-		color: var(--font-color-dark);
+		color: var(--project-color-dark);
 		font-size: 25px;
 		position: absolute;
 		z-index: 2;
 		right: 20px;
 		cursor: pointer;
-		text-shadow: 1px 1px 1px var(--font-color-dark);
+		text-shadow: 1px 1px 1px var(--project-color-dark);
 		top: 5px;
 	}
 
