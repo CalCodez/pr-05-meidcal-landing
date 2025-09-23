@@ -39,20 +39,6 @@
 	margin-bottom: 15px;
 }
 
-.btn {
-	background-color: var(--accent-blue);
-	color: var(--project-color-light);
-	width: 120px;
-	height: 40px;
-	border-radius: 15px;
-	border: 1px solid var(--project-color-dark);
-	box-shadow: 1px 1px 5px 1px var(--project-color-dark);
-	color: var(--project-color-light);
-	font-size: 15px;
-	font-weight: 600;
-	justify-self: center;
-}
-
 .hero-image-container {
 	/* outline: var(--ol); */
 	justify-content: space-around;
@@ -91,3 +77,5 @@
 .flex-inactive {
 	display: none;
 }
+
+/* **Services Section */
