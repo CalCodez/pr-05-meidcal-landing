@@ -16,7 +16,6 @@ const flexActive = 'flex-active';
 const flexInactive = 'flex-inactive';
 
 //Mobile Menu Vars and Functions
-
 function toggleMobileMenu() {
 	const menuToggler = getById('menu-toggler');
 	const mobileMenu = getById('mobile-menu');
@@ -39,5 +38,34 @@ function toggleMobileMenu() {
 		}
 	});
 }
-
 toggleMobileMenu();
+
+//Services Card Curtain Vars and Function
+const curtainToggles = selectAll('.service-card-view-more-btn');
+const serviceCurtain = selectAll('.services-card-curtain');
+const activeServiceCurtain = 'services-card-curtain-active';
+
+const [facilityToggle, caresToggle, specialtiesToggle] = curtainToggles;
+const [facilityCurtain, caresCurtain, specialtiesCurtain] = serviceCurtain;
+
+const toggleServiceCurtain = (toggler, curtain) => {
+	toggler.addEventListener(click, () => {
+		if (!curtain.classList.contains(activeServiceCurtain)) {
+			toggleClass(curtain, activeServiceCurtain);
+		} else {
+			toggleClass(curtain, activeServiceCurtain);
+		}
+	});
+
+	curtain.addEventListener(click, () => {
+		if (!curtain.classList.contains(activeServiceCurtain)) {
+			toggleClass(curtain, activeServiceCurtain);
+		} else {
+			toggleClass(curtain, activeServiceCurtain);
+		}
+	});
+};
+
+toggleServiceCurtain(facilityToggle, facilityCurtain);
+toggleServiceCurtain(caresToggle, caresCurtain);
+toggleServiceCurtain(specialtiesToggle, specialtiesCurtain);
