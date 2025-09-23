@@ -148,11 +148,6 @@ body {
 	font-size: 1.3rem;
 }
 
-.main-nav-links:hover,
-.mobile-nav-links:hover {
-	transform: scale(1.1);
-}
-
 .btn {
 	background-color: var(--accent-blue);
 	color: var(--project-color-light);
@@ -165,9 +160,19 @@ body {
 	font-size: 15px;
 	font-weight: 600;
 	justify-self: center;
+	cursor: pointer;
+}
+
+.main-nav-links:hover,
+.mobile-nav-links:hover,
+.btn:hover {
+	transform: scale(1.1);
 }
 
 section {
+	display: flex;
+	box-sizing: border-box;
+	width: 100%;
 	height: auto;
 	margin-bottom: 50px;
 	flex-wrap: wrap;
