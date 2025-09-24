@@ -44,28 +44,44 @@ toggleMobileMenu();
 const curtainToggles = selectAll('.service-card-view-more-btn');
 const serviceCurtain = selectAll('.services-card-curtain');
 const activeServiceCurtain = 'services-card-curtain-active';
+const curtainHeaders = selectAll('.curtain-header');
+const curtainUl = selectAll('.curtain-ul');
 
 const [facilityToggle, caresToggle, specialtiesToggle] = curtainToggles;
 const [facilityCurtain, caresCurtain, specialtiesCurtain] = serviceCurtain;
+const [facilityHeader, caresHeader, specialtiesHeader] = curtainHeaders;
+const [facilityUl, caresUl, specialtiesUl] = curtainUl;
 
-const toggleServiceCurtain = (toggler, curtain) => {
+const toggleServiceCurtain = (toggler, curtain, header, ul) => {
 	toggler.addEventListener(click, () => {
 		if (!curtain.classList.contains(activeServiceCurtain)) {
 			toggleClass(curtain, activeServiceCurtain);
+			setTimeout(() => {
+				toggleClass(header, flexActive);
+				toggleClass(ul, flexActive);
+			}, 200);
 		} else {
 			toggleClass(curtain, activeServiceCurtain);
+			toggleClass(header, flexActive);
+			toggleClass(ul, flexActive);
 		}
 	});
 
 	curtain.addEventListener(click, () => {
 		if (!curtain.classList.contains(activeServiceCurtain)) {
 			toggleClass(curtain, activeServiceCurtain);
+			setTimeout(() => {
+				toggleClass(header, flexActive);
+				toggleClass(ul, flexActive);
+			}, 200);
 		} else {
 			toggleClass(curtain, activeServiceCurtain);
+			toggleClass(header, flexActive);
+			toggleClass(ul, flexActive);
 		}
 	});
 };
 
-toggleServiceCurtain(facilityToggle, facilityCurtain);
-toggleServiceCurtain(caresToggle, caresCurtain);
-toggleServiceCurtain(specialtiesToggle, specialtiesCurtain);
+toggleServiceCurtain(facilityToggle, facilityCurtain, facilityHeader, facilityUl);
+toggleServiceCurtain(caresToggle, caresCurtain, caresHeader, caresUl);
+toggleServiceCurtain(specialtiesToggle, specialtiesCurtain, specialtiesHeader, specialtiesUl);
