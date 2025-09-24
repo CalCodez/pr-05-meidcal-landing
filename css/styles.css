@@ -20,27 +20,26 @@
 	text-align: center;
 }
 
+.hero-text-container {
+	justify-content: center;
+	align-items: center;
+	row-gap: 30px;
+}
+
 .hero-text {
 	font-size: 5rem;
 	color: var(--project-color-dark);
 	text-shadow: 1px 1px 8px var(--project-color-light);
-	margin-top: 15px;
-}
-
-.hero-text-container {
-	justify-content: center;
-	align-items: center;
 }
 
 .hero-slogan-text {
-	font-size: 2rem;
+	font-size: 1.7rem;
 	color: var(--project-color-light);
 	margin-bottom: 15px;
 }
 
 .hero-image-container {
-	/* outline: var(--ol); */
-	justify-content: space-around;
+	justify-content: center;
 }
 
 .facility-img-container {
@@ -51,8 +50,8 @@
 }
 
 .facility-img-container > img {
-	width: 100%;
-	height: 100%;
+	width: 90%;
+	height: 90%;
 }
 
 .facility-social-container {
@@ -87,8 +86,8 @@
 	place-content: center;
 	height: 90px;
 	padding-left: 10px;
-	font-size: 4rem;
-	font-family: 'Hello Bonia Serif', sans-serif;
+	font-size: 3rem;
+	/* font-family: 'Hello Bonia Serif', sans-serif; */
 }
 
 .services-cards-wrapper {

@@ -130,10 +130,9 @@ body {
 		rgba(26, 45, 66, 0.5),
 		rgba(26, 45, 66, 0.5),
 		rgba(26, 45, 66, 0.5),
-		rgba(26, 45, 66, 0.7) /* rgba(26, 45, 66, 0.7), */ /* rgba(26, 45, 66, 0.9) */
+		rgba(26, 45, 66, 0.7)
 	);
 	row-gap: 20px;
-
 	transition: height ease-in 0.2s;
 	z-index: 1;
 }
@@ -151,8 +150,8 @@ body {
 .btn {
 	background-color: var(--accent-blue);
 	color: var(--project-color-light);
-	width: 120px;
-	height: 40px;
+	width: 125px;
+	height: 45px;
 	border-radius: 15px;
 	border: 1px solid var(--project-color-dark);
 	box-shadow: 1px 1px 5px 1px var(--project-color-dark);
@@ -161,8 +160,16 @@ body {
 	font-weight: 600;
 	justify-self: center;
 	cursor: pointer;
+	background: linear-gradient(
+		15deg,
+		rgba(212, 216, 221, 0.5),
+		var(--accent-blue),
+		var(--accent-blue),
+		var(--accent-blue),
+		rgba(212, 216, 221, 0.5),
+		var(--project-color-light)
+	);
 }
-
 .main-nav-links:hover,
 .mobile-nav-links:hover,
 .btn:hover {
