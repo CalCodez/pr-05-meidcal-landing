@@ -203,6 +203,35 @@
 	padding-left: 8px;
 }
 
+.profile-card {
+	height: 320px;
+	width: 400px;
+	border: 1px outset var(--project-color-light);
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.profile-img-container {
+	width: 250px;
+	height: 250px;
+	border: 2px groove var(--project-color-dark);
+	border-radius: 50%;
+	/* overflow: hidden; */
+}
+
+.profile-img-container > img {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+	border-radius: 50%;
+}
+
+.profile-text-container {
+	width: 100%;
+	height: 50px;
+	outline: var(--ol);
+}
+
 .flex-active {
 	display: flex;
 }
