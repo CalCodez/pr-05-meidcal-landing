@@ -158,7 +158,6 @@ body {
 	color: var(--project-color-light);
 	font-size: 15px;
 	font-weight: 600;
-	justify-self: center;
 	cursor: pointer;
 	background: linear-gradient(
 		15deg,

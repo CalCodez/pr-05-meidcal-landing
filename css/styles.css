@@ -38,6 +38,13 @@
 	margin-bottom: 15px;
 }
 
+.hero-section-hr {
+	width: 80%;
+	border: 3px outset var(--project-color-dark);
+	box-shadow: 1px 1px 8px 1px var(--project-color-light);
+	margin-bottom: 30px;
+}
+
 .hero-image-container {
 	justify-content: center;
 }
