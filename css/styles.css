@@ -8,6 +8,7 @@
 		rgba(26, 45, 66, 0.3)
 	);
 	justify-content: space-between;
+	border-radius: 20px;
 }
 
 .hero-text-container,
