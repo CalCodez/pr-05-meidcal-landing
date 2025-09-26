@@ -255,18 +255,26 @@
 	padding-left: 8px;
 }
 
+.meet-doctors-section {
+	justify-content: space-evenly;
+	gap: 20px;
+	margin-top: 80px;
+}
+
 .profile-card {
-	height: 320px;
-	width: 400px;
+	height: 340px;
+	width: 250px;
 	border: 1px outset var(--project-color-light);
 	flex-direction: column;
 	justify-content: flex-start;
 	background: rgba(212, 216, 221, 0.8);
+	border-radius: 15px;
+	box-shadow: 2px 2px 5px 3px var(--black);
 }
 
 .profile-img-container {
-	width: 250px;
-	height: 250px;
+	width: 180px;
+	height: 180px;
 	border: 2px groove var(--project-color-dark);
 	border-radius: 50%;
 	/* overflow: hidden; */
@@ -283,6 +291,7 @@
 	width: 100%;
 	height: 50px;
 	outline: var(--ol);
+	flex-direction: column;
 }
 
 .flex-active {
