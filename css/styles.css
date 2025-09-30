@@ -78,8 +78,9 @@
 
 /* **Services Section */
 
-/* .services-section {
-} */
+.services-section {
+	outline: var(--olY);
+}
 
 .chairman-container {
 	width: 100%;
@@ -90,22 +91,23 @@
 	box-shadow: 2px 2px 15px 5px var(--project-color-dark);
 	background: rgba(212, 216, 221, 0.8);
 	column-gap: 15px;
+	padding-top: 10px;
 }
 
 .chairman-image-container,
 .chairman-statement-container {
-	height: 600px;
+	height: 650px;
 	width: 500px;
 }
 
 .chairman-image-container {
 	flex-direction: column;
-	row-gap: 5px;
+	justify-content: flex-start;
 }
 
 .chairman-image-container > img {
-	width: 400px;
-	height: 400px;
+	width: 380px;
+	height: 500px;
 	border: 5px solid var(--project-color-dark);
 	border-radius: 20px;
 }
@@ -115,6 +117,7 @@
 	font-weight: 600;
 	width: 100%;
 	text-align: center;
+	margin-top: 10px;
 }
 
 .chairman-figcaption {
@@ -123,22 +126,38 @@
 	font-size: 18px;
 }
 
+.chairman-social-container {
+	width: 100%;
+	height: 40px;
+	margin-top: 20px;
+	column-gap: 40px;
+}
+
+.chairman-social-container > i {
+	color: var(--project-color-dark);
+	font-size: 30px;
+	text-shadow: 1px 1px 1px var(--black);
+}
+
+.chairman-statement-container {
+	align-items: flex-start;
+	padding-top: 50px;
+}
+
+.chairman-statement {
+	color: var(--project-color-dark);
+	font-size: 1.7rem;
+	line-height: 1.2;
+	width: 75%;
+	font-weight: 600;
+}
+
 .services-banner {
 	height: 100px;
 	width: 100%;
 	justify-content: center;
 	margin-bottom: 30px;
 }
-
-.chairman-statement {
-	color: var(--project-color-dark);
-	font-size: 1.5rem;
-	line-height: 1.2;
-	width: 70%;
-	margin-top: -40px;
-	font-weight: 600;
-}
-
 .services-header-text {
 	color: var(--project-color-dark);
 	text-shadow: 1px 1px 8px var(--project-color-light);
@@ -255,21 +274,30 @@
 	padding-left: 8px;
 }
 
-.meet-doctors-section {
+.meet-chiefs-container {
 	justify-content: space-evenly;
-	gap: 20px;
 	margin-top: 80px;
+	flex-wrap: wrap;
+	gap: 80px;
 }
 
 .profile-card {
-	height: 340px;
+	height: 260px;
 	width: 250px;
 	border: 1px outset var(--project-color-light);
 	flex-direction: column;
 	justify-content: flex-start;
 	background: rgba(212, 216, 221, 0.8);
-	border-radius: 15px;
+	border-radius: 2px;
 	box-shadow: 2px 2px 5px 3px var(--black);
+}
+
+.profile-card:hover {
+	background-color: var(--project-color-dark);
+	color: var(--project-color-light);
+	transform: scale(1.1);
+	border-radius: 15px;
+	transition: all ease 0.5s;
 }
 
 .profile-img-container {
