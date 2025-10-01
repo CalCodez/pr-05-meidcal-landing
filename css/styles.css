@@ -82,7 +82,7 @@
 	outline: var(--olY);
 } */
 
-.chairman-container {
+.ceo-container {
 	width: 100%;
 	height: auto;
 	flex-wrap: wrap;
@@ -90,58 +90,85 @@
 	border-radius: 20px;
 	box-shadow: 2px 2px 15px 5px var(--project-color-dark);
 	background: rgba(212, 216, 221, 0.8);
-	column-gap: 15px;
+	column-gap: 30px;
 	padding-top: 10px;
 	position: relative;
-	outline: var(--olR);
+	transition: all ease-in 0.5s;
 }
 
-.chairman-dots {
-	height: 80px;
-	width: 80px;
-	background-color: var(--project-color-dark);
+.ceo-dots {
+	height: 120px;
+	width: 120px;
+	background-color: rgba(26, 45, 66, 0.9);
 	border-radius: 50%;
 	position: absolute;
-	z-index: 1;
+	color: var(--project-color-light);
+	display: flex;
+	place-content: center;
+	place-items: center;
+	font-size: 40px;
 }
 
-.chairman-image-container,
-.chairman-statement-container {
+.ceo-dots:nth-child(1) {
+	top: 60px;
+	left: -40px;
+	height: 180px;
+	width: 180px;
+}
+.ceo-dots:nth-child(2) {
+	left: 25px;
+	height: 220px;
+	width: 220px;
+	bottom: 100px;
+	left: 90px;
+}
+.ceo-dots:nth-child(3) {
+	bottom: 175px;
+	right: 20px;
+	top: 95px;
+}
+
+.ceo-image-container,
+.ceo-statement-container {
 	height: 650px;
 	width: 400px;
-	outline: var(--olB);
 }
 
-.chairman-image-container {
+.ceo-image-container {
 	flex-direction: column;
-	justify-content: center;
-	outline: var(--olY);
+	/* justify-content: center; */
 	position: relative;
 }
 
-.chairman-image-container > img {
+.ceo-image-container > img {
 	width: 320px;
 	height: 320px;
 	border: 5px solid var(--project-color-dark);
 	border-radius: 20px;
-	margin-bottom: 30px;
+	margin-bottom: 2px;
+	z-index: 1;
 }
 
-.chairman-figure {
-	font-size: 20px;
+.ceo-figure {
+	font-size: 25px;
 	font-weight: 600;
 	width: 100%;
 	text-align: center;
 	margin-top: 10px;
+	color: var(--project-color-light);
+	z-index: 1;
+	margin-bottom: 3px;
 }
 
-.chairman-figcaption {
+.ceo-figcaption {
 	width: 100%;
 	text-align: center;
 	font-size: 16px;
+	color: var(--project-color-light);
+	z-index: 1;
 }
 
-.chairman-social-container {
+.ceo-social-container {
 	width: 0px;
 	height: 300px;
 	margin-top: 20px;
@@ -150,24 +177,23 @@
 	flex-direction: column;
 	right: 0px;
 	top: 120px;
-	outline: var(--olR);
 	justify-content: space-around;
 	transition: width ease-in 0.5s;
 }
 
-.chairman-social-container > i {
+.ceo-social-container > i {
 	color: var(--project-color-dark);
 	font-size: 30px;
 	text-shadow: 1px 1px 1px var(--black);
 	visibility: hidden;
 }
 
-.chairman-statement-container {
+.ceo-statement-container {
 	align-items: flex-start;
 	padding-top: 50px;
 }
 
-.chairman-statement {
+.ceo-statement {
 	color: var(--project-color-dark);
 	font-size: 1.5rem;
 	line-height: 1.2;

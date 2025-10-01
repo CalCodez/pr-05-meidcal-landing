@@ -1,3 +1,42 @@
+.ceo-container:hover {
+	background: var(--project-color-dark);
+}
+
+.ceo-container:hover .ceo-dots {
+	background-color: var(--accent-blue);
+}
+
+.ceo-container:hover .ceo-image-container {
+	align-items: start;
+}
+
+.ceo-container:hover .ceo-social-container {
+	width: 40px;
+}
+
+.ceo-container:hover .ceo-social-container > i {
+	visibility: visible;
+	color: var(--project-color-light);
+}
+
+.ceo-container:hover .ceo-social-container > i:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+.ceo-container:hover .ceo-figure,
+.ceo-container:hover .ceo-figcaption {
+	text-align: left;
+}
+
+.ceo-container:hover .ceo-figcaption {
+	color: var(--accent-blue);
+}
+
+.ceo-container:hover .ceo-statement {
+	color: var(--project-color-light);
+}
+
 /* **Chief Cards Hover Transition Styles */
 .profile-card:hover {
 	background-color: var(--project-color-dark);
