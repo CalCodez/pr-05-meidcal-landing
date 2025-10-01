@@ -50,6 +50,11 @@
 	.logo-container {
 		justify-content: flex-start;
 	}
+
+	.services-header-text {
+		font-size: 1.8rem;
+		text-align: center;
+	}
 }
 
 @media (max-width: 320px) {
@@ -60,5 +65,16 @@
 
 	.facility-social-container {
 		font-size: 1.5rem;
+	}
+
+	.chairman-image-container > img {
+		width: 300px;
+		height: 400px;
+	}
+
+	.chairman-statement {
+		font-size: 1.5rem;
+		width: 90%;
+		text-align: center;
 	}
 }
