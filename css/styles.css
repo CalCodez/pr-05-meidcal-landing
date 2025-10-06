@@ -132,6 +132,7 @@
 .ceo-statement-container {
 	height: 650px;
 	width: 400px;
+	outline: var(--olR);
 }
 
 .ceo-image-container {
