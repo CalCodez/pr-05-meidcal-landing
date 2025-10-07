@@ -86,9 +86,3 @@
 .profile-card:hover .profile-text-container > h5 {
 	color: var(--accent-blue);
 }
-
-@media (max-width: 320px) {
-	.ceo-container:hover .ceo-figcaption {
-		color: var(--project-color-light);
-	}
-}

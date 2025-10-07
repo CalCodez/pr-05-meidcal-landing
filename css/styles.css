@@ -120,7 +120,7 @@
 	left: 25px;
 	height: 220px;
 	width: 220px;
-	bottom: 60px;
+	bottom: 90px;
 	left: 90px;
 }
 .ceo-dots:nth-child(3) {
@@ -133,7 +133,7 @@
 .ceo-image-container,
 .ceo-statement-container {
 	flex-direction: column;
-	height: 650px;
+	height: 750px;
 	width: 400px;
 }
 
@@ -217,20 +217,21 @@
 
 .quote-top {
 	left: 12px;
-	top: 150px;
+	top: 170px;
 }
 
 .quote-bottom {
 	right: 40px;
-	bottom: 100px;
+	bottom: 120px;
 }
 
 .ceo-statement {
 	font-size: 1.2rem;
-	line-height: 1.5;
+	line-height: 1.7;
 	width: 88%;
 	font-weight: 600;
 	z-index: 1;
+	text-align: justify;
 }
 
 .services-banner {
