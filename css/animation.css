@@ -35,9 +35,12 @@
 }
 
 .ceo-container:hover .ceo-figcaption,
-.ceo-container:hover .ceo-em,
-.ceo-container:hover .ceo-quote-marks {
+.ceo-container:hover .ceo-em {
 	color: var(--accent-blue);
+	visibility: visible;
+}
+
+.ceo-container:hover .ceo-quote-marks {
 	visibility: visible;
 }
 
@@ -82,4 +85,10 @@
 
 .profile-card:hover .profile-text-container > h5 {
 	color: var(--accent-blue);
+}
+
+@media (max-width: 320px) {
+	.ceo-container:hover .ceo-figcaption {
+		color: var(--project-color-light);
+	}
 }

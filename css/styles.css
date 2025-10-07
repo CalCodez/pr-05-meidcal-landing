@@ -110,22 +110,24 @@
 }
 
 .ceo-dots:nth-child(1) {
-	top: 60px;
-	left: -40px;
+	top: 40px;
+	left: -50px;
 	height: 180px;
 	width: 180px;
+	padding: 15px;
 }
 .ceo-dots:nth-child(2) {
 	left: 25px;
 	height: 220px;
 	width: 220px;
-	bottom: 100px;
+	bottom: 60px;
 	left: 90px;
 }
 .ceo-dots:nth-child(3) {
 	bottom: 175px;
-	right: 20px;
-	top: 95px;
+	right: -20px;
+	top: 75px;
+	padding: 20px;
 }
 
 .ceo-image-container,
@@ -141,7 +143,7 @@
 
 .ceo-image-container > img {
 	width: 320px;
-	height: 320px;
+	height: 420px;
 	border: 5px solid var(--project-color-dark);
 	border-radius: 20px;
 	margin-bottom: 2px;
@@ -189,40 +191,46 @@
 
 .ceo-statement-container {
 	color: var(--project-color-dark);
-	row-gap: 50px;
+	row-gap: 30px;
 	position: relative;
 }
 
 .ceo-message-header {
-	font-size: 1.8rem;
+	font-size: 2.5rem;
 	font-weight: 600;
 	width: 90%;
-	line-height: 2;
 	text-align: center;
 }
 
 .ceo-quote-marks {
 	position: absolute;
-	font-size: 90px;
+	font-size: 180px;
 	display: flex;
 	visibility: hidden;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	justify-content: center;
+	align-content: center;
+	color: var(--accent-blue);
 }
 
 .quote-top {
-	left: 0;
-	top: 170px;
+	left: 12px;
+	top: 150px;
 }
 
 .quote-bottom {
-	right: 50px;
-	bottom: 50px;
+	right: 40px;
+	bottom: 100px;
 }
 
 .ceo-statement {
 	font-size: 1.2rem;
 	line-height: 1.5;
-	width: 85%;
+	width: 88%;
 	font-weight: 600;
+	z-index: 1;
 }
 
 .services-banner {
