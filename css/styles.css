@@ -90,10 +90,10 @@
 	border-radius: 20px;
 	box-shadow: 2px 2px 15px 5px var(--project-color-dark);
 	background: rgba(212, 216, 221, 0.8);
-	column-gap: 30px;
 	padding-top: 10px;
 	position: relative;
 	transition: all ease-in 0.5s;
+	justify-content: space-evenly;
 }
 
 .ceo-dots {
@@ -130,14 +130,12 @@
 
 .ceo-image-container,
 .ceo-statement-container {
+	flex-direction: column;
 	height: 650px;
 	width: 400px;
-	outline: var(--olR);
 }
 
 .ceo-image-container {
-	flex-direction: column;
-	/* justify-content: center; */
 	position: relative;
 }
 
@@ -190,15 +188,40 @@
 }
 
 .ceo-statement-container {
-	align-items: flex-start;
-	padding-top: 50px;
+	color: var(--project-color-dark);
+	row-gap: 50px;
+	position: relative;
+}
+
+.ceo-message-header {
+	font-size: 1.8rem;
+	font-weight: 600;
+	width: 90%;
+	line-height: 2;
+	text-align: center;
+}
+
+.ceo-quote-marks {
+	position: absolute;
+	font-size: 90px;
+	display: flex;
+	visibility: hidden;
+}
+
+.quote-top {
+	left: 0;
+	top: 170px;
+}
+
+.quote-bottom {
+	right: 50px;
+	bottom: 50px;
 }
 
 .ceo-statement {
-	color: var(--project-color-dark);
-	font-size: 1.5rem;
-	line-height: 1.2;
-	width: 75%;
+	font-size: 1.2rem;
+	line-height: 1.5;
+	width: 85%;
 	font-weight: 600;
 }
 

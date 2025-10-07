@@ -29,11 +29,19 @@
 	text-align: left;
 }
 
-.ceo-container:hover .ceo-figcaption {
-	color: var(--accent-blue);
+.ceo-container:hover .ceo-message-header {
+	border-top: 2px outset var(--accent-blue);
+	border-bottom: 2px outset var(--accent-blue);
 }
 
-.ceo-container:hover .ceo-statement {
+.ceo-container:hover .ceo-figcaption,
+.ceo-container:hover .ceo-em,
+.ceo-container:hover .ceo-quote-marks {
+	color: var(--accent-blue);
+	visibility: visible;
+}
+
+.ceo-container:hover .ceo-statement-container {
 	color: var(--project-color-light);
 }
 
