@@ -417,6 +417,11 @@
 	visibility: hidden;
 }
 
+.temp-section {
+	outline: 1px solid red;
+	height: 600px;
+}
+
 .flex-active {
 	display: flex;
 }

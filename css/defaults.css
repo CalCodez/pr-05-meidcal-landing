@@ -10,6 +10,7 @@
 	--accent-blue: #2323ff;
 	--project-color-dark: #1a2d42;
 	--project-color-light: #d4d8dd;
+	--project-font: 'Hello Bonia Serif', sans-serif;
 }
 
 * {
@@ -69,7 +70,7 @@ body {
 	font-size: 5rem;
 	color: #1a2d42;
 	text-shadow: 1px 1px 8px var(--project-color-light);
-	font-family: 'Hello Bonia Serif', sans-serif;
+	font-family: var(--project-font);
 }
 
 .nav-bar {
