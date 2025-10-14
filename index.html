@@ -509,26 +509,40 @@
 		<section class="patient-center-section">
 			<img src="./assets/backgrounds/medial-bg.jpg" alt="medial-bg" />
 
-			<div class="patient-center-nav-container container">
-				<h2 class="patient-center-header-text">Patient Center</h2>
-
-				<div class="patient-toggle-container container">
-					<span class="patient-toggle">Patient Portal</span>
-					<span class="patient-toggle">Pay Bill</span>
-					<span class="patient-toggle">Schedule Appointment</span>
-				</div>
-			</div>
 			<div class="patient-center-text-form-container container">
 				<div class="patient-text-container container">
+					<h2 class="patient-center-header-text">Patient Center</h2>
+
 					<h2 class="patient-center-text">Something Something Type of Text</h2>
-					<div class="patient-toggle-container-2 container">
+					<div class="patient-toggle-container container">
 						<span class="patient-toggle">Patient Portal</span>
 						<span class="patient-toggle">Pay Bill</span>
 						<span class="patient-toggle">Schedule Appointment</span>
 					</div>
 				</div>
 
-				<div class="patient-form-container"></div>
+				<div class="patient-form-container container">
+					<form class="patient-portal-form container">
+						<h2 class="portal-from-header-text">Patient Portal</h2>
+						<div class="portal-input-container container">
+							<input
+								class="container portal-inputs"
+								name="portal-username"
+								type="text"
+								placeholder="Username" />
+							<input
+								class="container portal-inputs"
+								name="portal-password"
+								type="password"
+								placeholder="password" />
+						</div>
+						<div class="portal-button-container container">
+							<span class="static-toggles btn">Login</span>
+							<span class="static-toggles btn">Cancel</span>
+						</div>
+						<a href="#">Create An Account?</a>
+					</form>
+				</div>
 			</div>
 		</section>
 	</body>
