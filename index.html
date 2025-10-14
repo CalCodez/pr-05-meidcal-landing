@@ -522,25 +522,109 @@
 				</div>
 
 				<div class="patient-form-container container">
-					<form class="patient-portal-form container">
-						<h2 class="portal-from-header-text">Patient Portal</h2>
-						<div class="portal-input-container container">
+					<!-- **Patient Portal Form -->
+					<form id="portal-form" class="patient-portal-form container flex-active">
+						<h2 class="from-header-text">Patient Portal</h2>
+						<div class="input-container container">
 							<input
-								class="container portal-inputs"
+								class="container inputs"
 								name="portal-username"
 								type="text"
 								placeholder="Username" />
 							<input
-								class="container portal-inputs"
+								class="container inputs"
 								name="portal-password"
 								type="password"
-								placeholder="password" />
+								placeholder="Password" />
 						</div>
-						<div class="portal-button-container container">
+						<div class="form-button-container container">
 							<span class="static-toggles btn">Login</span>
 							<span class="static-toggles btn">Cancel</span>
 						</div>
 						<a href="#">Create An Account?</a>
+					</form>
+
+					<!-- **Pay Bill Form -->
+					<form id="bill-form" class="pay-bill-form container flex-inactive">
+						<h2 class="from-header-text">Pay Bill</h2>
+						<div class="input-container container">
+							<input
+								class="container inputs"
+								name="payment acc number"
+								type="number"
+								placeholder="Account #" />
+							<label for="payment acc number">Enter Account Number</label>
+
+							<input
+								class="container inputs"
+								name="pay bill amount"
+								type="number"
+								min="0"
+								step="0.01"
+								inputmode="decimal"
+								placeholder="$0.00" />
+							<label for="pay bill amount">Enter Payment Amount</label>
+
+							<select class="inputs" name="payment method">
+								<option value="credit">Select Payment Option</option>
+								<option value="credit">Credit</option>
+								<option value="debit">Debit</option>
+								<option value="checking">Checking</option>
+							</select>
+
+							<label for="payment method">Select Payment Method</label>
+						</div>
+						<div class="form-button-container container">
+							<span class="static-toggles pay-bill-toggles btn">Submit</span>
+							<span class="static-toggles pay-bill-toggles btn">Cancel</span>
+						</div>
+					</form>
+
+					<!-- **Schedule Appointment Form -->
+
+					<form class="schedule-appointment-form container flex-inactive" id="schedule-form">
+						<h2 class="from-header-text">Schedule Appointment</h2>
+						<div class="input-container container">
+							<input
+								class="container inputs"
+								name="first name"
+								type="text"
+								placeholder="First Name" />
+							<label for="first name">Enter First Name</label>
+
+							<input
+								class="container inputs"
+								name="last name"
+								type="text"
+								placeholder="Last Name" />
+							<label for="last name">Enter Last Name</label>
+
+							<select class="inputs" name="provider" id="payment-method">
+								<option value="#">Dr. Marcus Ellery, MD</option>
+								<option value="#">Dr. Sophia Tran, DO</option>
+								<option value="#">Dr. Benjamin Hart, PhD</option>
+								<option value="#">Dr. Lila Gomez, DNP</option>
+								<option value="#">Dr. Carter Reeves, DDS</option>
+								<option value="#">Dr. Naomi Patel, MD</option>
+								<option value="#">Dr. Elijah Brooks, PsyD</option>
+								<option value="#">Dr. Avery Chen, DPM</option>
+								<option value="#">Dr. Renee Wallace, MD, MPH</option>
+								<option value="#">Dr. Daniel Okafor, PhD</option>
+								<option value="#">Provider Not Listed</option>
+							</select>
+
+							<label for="provider">Select Provider</label>
+							<input
+								class="container inputs date-input"
+								name="date"
+								type="date"
+								placeholder="First Name" />
+							<label for="date">Select Date</label>
+						</div>
+						<div class="form-button-container container">
+							<span class="static-toggles pay-bill-toggles btn">Schedule Now</span>
+							<span class="static-toggles pay-bill-toggles btn">Cancel</span>
+						</div>
 					</form>
 				</div>
 			</div>

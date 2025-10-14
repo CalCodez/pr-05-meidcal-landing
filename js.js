@@ -87,3 +87,10 @@ toggleServiceCurtain(caresToggle, caresCurtain, caresHeader, caresUl);
 toggleServiceCurtain(specialtiesToggle, specialtiesCurtain, specialtiesHeader, specialtiesUl);
 
 //!!Patient Center Vars and Functions
+
+const portalForm = getById('portal-form');
+const billForm = getById('bill-form');
+const scheduleForm = getById('schedule-form');
+
+const formToggles = selectAll('.patient-toggle');
+const [porToggle, billToggle, scheduleToggle] = formToggles;

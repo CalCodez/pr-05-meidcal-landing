@@ -486,8 +486,11 @@
 
 /* ++Patient Portal */
 
-.patient-portal-form {
-	height: 60%;
+.patient-portal-form,
+.pay-bill-form,
+.schedule-appointment-form {
+	height: 600px;
+
 	width: 95%;
 	background: rgba(26, 45, 66, 0.8);
 	border-radius: 10px;
@@ -496,50 +499,82 @@
 	justify-content: space-around;
 }
 
-.portal-from-header-text {
+.patient-portal-form {
+	height: 70%;
+}
+
+.from-header-text {
 	font-size: 3rem;
 	color: var(--project-color-light);
 }
 
-.portal-input-container {
+.schedule-appointment-form .from-header-text {
+	font-size: 2rem;
+}
+
+.input-container {
 	width: 95%;
 	height: 200px;
 	flex-direction: column;
 	justify-content: space-around;
 }
 
-.portal-inputs {
+.pay-bill-form .input-container,
+.schedule-appointment-form .input-container {
+	height: 300px;
+	justify-content: space-between;
+}
+
+.inputs {
 	width: 80%;
 	height: 45px;
 	border: 2px solid var(--project-color-dark);
 	border-radius: 12px;
-	box-shadow: 2px 2px 5px 2px var(--project-color-dark);
-	/* background-color: var(--project-color-dark); */
-	color: var(--accent-blue);
+	color: var(--project-color-light);
 	padding-left: 5px;
-	background: linear-gradient(
-		15deg,
-		rgba(212, 216, 221, 0.8),
-		var(--accent-blue),
-		var(--accent-blue),
-		var(--accent-blue),
-		var(--project-color-light),
-		var(--project-color-light)
-	);
+	box-shadow: 1px 1px 5px 1px var(--accent-blue);
+	background: var(--project-color-dark);
 }
 
-.portal-inputs::placeholder {
+.inputs::placeholder {
 	color: var(--project-color-light);
+	font-size: 1rem;
+	bottom: 5px;
+	padding-left: 5px;
+}
+
+label {
+	color: var(--accent-blue);
+	width: 75%;
+	text-shadow: 2px 2px 2px var(--black);
+	margin-top: -30px;
+}
+
+.schedule-appointment-form .input-container label {
+	margin-top: 0;
+}
+
+select {
+	font-size: 1rem;
+}
+
+.date-input {
 	font-size: 1.2rem;
+	color: var(--accent-blue);
+}
+
+option {
+	color: var(--accent-blue);
 }
 
 .patient-portal-form > a {
 	color: var(--project-color-light);
 	text-decoration: underline;
 	font-size: 1.2rem;
+	margin-bottom: 12px;
 }
 
-.portal-button-container {
+.form-button-container {
 	width: 95%;
 	height: 100px;
 	justify-content: space-evenly;
@@ -550,6 +585,12 @@
 	text-align: center;
 	font-size: 20px;
 	text-shadow: 1px 1px 1px var(--black);
+	background: var(--project-color-dark);
+	box-shadow: 1px 1px 2px 1px var(--accent-blue);
+}
+
+.schedule-appointment-form .static-toggles {
+	font-size: 1.1rem;
 }
 
 .flex-active {
