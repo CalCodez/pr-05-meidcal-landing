@@ -492,7 +492,6 @@
 .patient-toggle-container-2 {
 	height: 80px;
 	width: 400px;
-	outline: var(--olR);
 	justify-content: space-around;
 }
 
