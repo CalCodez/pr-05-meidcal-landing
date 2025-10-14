@@ -85,3 +85,29 @@ const toggleServiceCurtain = (toggler, curtain, header, ul) => {
 toggleServiceCurtain(facilityToggle, facilityCurtain, facilityHeader, facilityUl);
 toggleServiceCurtain(caresToggle, caresCurtain, caresHeader, caresUl);
 toggleServiceCurtain(specialtiesToggle, specialtiesCurtain, specialtiesHeader, specialtiesUl);
+
+//!!Patient Center Vars and Functions
+
+const patientToggles = selectAll('.patient-toggle');
+
+const [portal1Toggle, bill1Toggle, schedule1Toggle, portal2Toggle, bill2Toggle, schedule2Toggle] =
+	patientToggles;
+
+const patientTextContainer = select('.patient-text-container');
+const patientFormContainer = select('.patient-form-container');
+
+const formActive = 'patient-form-container-active';
+
+const togglePatientForm = (toggler, container) => {
+	toggler.addEventListener(click, () => {
+		if (!container.classList.contains(formActive)) {
+			toggleClass(container, formActive);
+			patientTextContainer.style.width = '30%';
+		} else {
+			toggleClass(container, formActive);
+			patientTextContainer.style.width = '100%';
+		}
+	});
+};
+
+togglePatientForm(portal1Toggle, patientFormContainer);

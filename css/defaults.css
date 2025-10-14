@@ -79,7 +79,8 @@ body {
 	justify-content: space-evenly;
 }
 
-.main-nav-links {
+.main-nav-links,
+.patient-toggle {
 	display: flex;
 	box-sizing: border-box;
 	color: var(--project-color-light);
@@ -102,6 +103,7 @@ body {
 		rgba(26, 45, 66, 0.3)
 	);
 	box-shadow: 2px 2px 5px 2px var(--project-color-dark);
+	cursor: pointer;
 }
 
 #menu-toggler {
