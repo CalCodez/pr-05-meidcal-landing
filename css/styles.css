@@ -441,11 +441,10 @@
 
 .patient-text-container {
 	height: 680px;
-	width: 300px;
+	width: 400px;
 	z-index: 1;
 	flex-direction: column;
 	justify-content: space-around;
-	outline: var(--ol);
 	transition: width ease 0.9s;
 }
 
@@ -466,7 +465,6 @@
 	height: 200px;
 	width: 400px;
 	justify-content: space-around;
-	outline: var(--olY);
 	flex-direction: column;
 	width: 100%;
 }
@@ -478,7 +476,6 @@
 .patient-form-container {
 	width: 460px;
 	height: 680px;
-	outline: var(--olR);
 	transition: width ease 0.9s;
 }
 
