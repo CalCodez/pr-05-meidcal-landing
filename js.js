@@ -10,35 +10,79 @@ const select = (selector) => document.querySelector(selector);
 const selectAll = (selector) => document.querySelectorAll(selector);
 const textContent = (element, text) => (element.textContent = text);
 
+//NOTE: Temp Display Toggle Section function (REMOVE ON PROJECT COMPLETE)
+const hideSection = (section) => {
+	section.style.display = 'none';
+};
+
+const heroSection = getById('hero-section');
+const servicesSection = getById('services-section');
+const patientCenterSection = getById('patient-center-section');
+
+// hideSection(heroSection);
+// hideSection(servicesSection);
+// hideSection(patientCenterSection);
+
+//NOTE: HTML SECTIONs ^
+
+//Global Project Vars
 const click = 'click';
 const keyup = 'keyup';
 const flexActive = 'flex-active';
 const flexInactive = 'flex-inactive';
 
 //Mobile Menu Vars and Functions
-function toggleMobileMenu() {
-	const menuToggler = getById('menu-toggler');
-	const mobileMenu = getById('mobile-menu');
-	const activeMenu = 'mobile-menu-active';
-	const mobileLinks = selectAll('.mobile-nav-links');
 
-	menuToggler.addEventListener(click, () => {
-		if (!mobileMenu.classList.contains(activeMenu)) {
-			toggleClass(mobileMenu, activeMenu);
-			for (let link of mobileLinks) {
+//``Main Nav Vars
+const menuToggler = getById('menu-toggler');
+const mobileMenu = getById('mobile-menu');
+const activeMenu = 'mobile-menu-active';
+const mobileLinks = selectAll('.mobile-nav-links');
+
+//``Patient Center Mobile Menu Vars
+const patientMenuToggler = getById('patient-mobile-menu-toggle');
+const patientMenu = getById('patient-mobile-menu');
+const mobilePatientToggles = selectAll('.mobile-patient-toggle');
+
+const menuToggle = (toggler, menu, arr) => {
+	toggler.addEventListener(click, () => {
+		if (!menu.classList.contains(activeMenu)) {
+			toggleClass(menu, activeMenu);
+			for (let elms of arr) {
 				setTimeout(() => {
-					toggleClass(link, flexActive);
+					toggleClass(elms, flexActive);
 				}, 200);
 			}
 		} else {
-			for (let link of mobileLinks) {
-				toggleClass(link, flexActive);
+			for (let elms of arr) {
+				toggleClass(elms, flexActive);
 			}
-			toggleClass(mobileMenu, activeMenu);
+			toggleClass(menu, activeMenu);
 		}
 	});
-}
-toggleMobileMenu();
+
+	menu.addEventListener(click, () => {
+		if (menu.classList.contains(activeMenu)) {
+			toggleClass(menu, activeMenu);
+			for (let elms of arr) {
+				toggleClass(elms, flexActive);
+			}
+		}
+	});
+
+	window.addEventListener(keyup, (e) => {
+		if (e.key === 'Escape' && menu.classList.contains(activeMenu)) {
+			toggleClass(menu, activeMenu);
+
+			for (let elms of arr) {
+				toggleClass(elms, flexActive);
+			}
+		}
+	});
+};
+
+menuToggle(menuToggler, mobileMenu, mobileLinks);
+menuToggle(patientMenuToggler, patientMenu, mobilePatientToggles);
 
 //Services Card Curtain Vars and Function
 const curtainToggles = selectAll('.service-card-view-more-btn');
@@ -93,28 +137,33 @@ const billForm = getById('bill-form');
 const scheduleForm = getById('schedule-form');
 
 const formToggles = selectAll('.patient-toggle');
-const [portalToggle, billToggle, scheduleToggle] = formToggles;
 
-const toggleForms = (toggler, targetForm, form1, form2) => {
-	toggler.addEventListener(click, () => {
-		if (
-			!targetForm.classList.contains(flexActive) &&
-			!form1.classList.contains(flexActive) &&
-			form2.classList.contains(flexActive)
-		) {
-			toggleClass(targetForm, flexActive);
-			toggleClass(form2, flexActive);
-		} else if (
-			!targetForm.classList.contains(flexActive) &&
-			form1.classList.contains(flexActive) &&
-			!form2.classList.contains(flexActive)
-		) {
-			toggleClass(targetForm, flexActive);
-			toggleClass(form1, flexActive);
-		}
-	});
+const portalToggles = [formToggles[0], formToggles[3]];
+const billToggles = [formToggles[1], formToggles[4]];
+const scheduleToggles = [formToggles[2], formToggles[5]];
+
+const toggleForms = (arrOfToggles, targetForm, form1, form2) => {
+	for (let toggler of arrOfToggles) {
+		toggler.addEventListener(click, () => {
+			if (
+				!targetForm.classList.contains(flexActive) &&
+				!form1.classList.contains(flexActive) &&
+				form2.classList.contains(flexActive)
+			) {
+				toggleClass(targetForm, flexActive);
+				toggleClass(form2, flexActive);
+			} else if (
+				!targetForm.classList.contains(flexActive) &&
+				form1.classList.contains(flexActive) &&
+				!form2.classList.contains(flexActive)
+			) {
+				toggleClass(targetForm, flexActive);
+				toggleClass(form1, flexActive);
+			}
+		});
+	}
 };
 
-toggleForms(billToggle, billForm, scheduleForm, portalForm);
-toggleForms(scheduleToggle, scheduleForm, portalForm, billForm);
-toggleForms(portalToggle, portalForm, billForm, scheduleForm);
+toggleForms(billToggles, billForm, scheduleForm, portalForm);
+toggleForms(scheduleToggles, scheduleForm, portalForm, billForm);
+toggleForms(portalToggles, portalForm, billForm, scheduleForm);

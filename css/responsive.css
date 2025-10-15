@@ -3,16 +3,18 @@
 		display: none;
 	}
 
-	#menu-toggler {
+	#menu-toggler,
+	#patient-mobile-menu-toggle {
 		display: flex;
-		color: var(--project-color-dark);
-		font-size: 25px;
-		position: absolute;
-		z-index: 2;
-		right: 20px;
-		cursor: pointer;
-		text-shadow: 1px 1px 1px var(--project-color-dark);
-		top: 5px;
+	}
+
+	.patient-center-section .mobile-menu-active {
+		height: 220px;
+		width: 240px;
+	}
+
+	.patient-toggle-container {
+		display: none;
 	}
 
 	.hero-section {
@@ -49,6 +51,11 @@
 	.mobile-menu-active {
 		top: 35px;
 	}
+
+	.patient-center-section .mobile-menu-active {
+		top: -2px;
+	}
+
 	.logo-nav-container,
 	.logo-container {
 		justify-content: flex-start;

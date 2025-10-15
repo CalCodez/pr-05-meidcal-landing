@@ -107,11 +107,21 @@ body {
 	cursor: pointer;
 }
 
-#menu-toggler {
+#menu-toggler,
+#patient-mobile-menu-toggle {
 	display: none;
+	color: var(--project-color-light);
+	font-size: 25px;
+	position: absolute;
+	z-index: 2;
+	right: 20px;
+	cursor: pointer;
+	text-shadow: 1px 1px 1px var(--project-color-dark);
+	top: 5px;
 }
 
-.mobile-menu {
+.mobile-menu,
+.patient-mobile-menu {
 	width: 280px;
 	height: 0;
 	z-index: 1;
@@ -126,24 +136,25 @@ body {
 	right: 10px;
 	top: -5px;
 	border: 4px outset var(--project-color-dark);
-	background: conic-gradient(
-		rgba(26, 45, 66, 0.7),
-		rgba(212, 216, 221, 0.4),
-		rgba(26, 45, 66, 0.5),
-		rgba(26, 45, 66, 0.5),
-		rgba(26, 45, 66, 0.5),
-		rgba(26, 45, 66, 0.5),
-		rgba(26, 45, 66, 0.5),
-		rgba(26, 45, 66, 0.7)
+	background: linear-gradient(
+		320deg,
+		var(--project-color-light),
+		var(--project-color-dark),
+		var(--project-color-dark),
+		var(--project-color-dark)
 	);
 	row-gap: 20px;
 	transition: height ease-in 0.2s;
 	z-index: 1;
 }
 
+.patient-mobile-menu-active {
+	height: 220px;
+}
+
 .mobile-nav-links {
 	display: none;
-	color: var(--project-color-light);
+	color: var(--accent-blue);
 	width: 80%;
 	height: 40px;
 	place-items: center;
