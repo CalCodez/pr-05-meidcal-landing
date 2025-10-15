@@ -93,4 +93,28 @@ const billForm = getById('bill-form');
 const scheduleForm = getById('schedule-form');
 
 const formToggles = selectAll('.patient-toggle');
-const [porToggle, billToggle, scheduleToggle] = formToggles;
+const [portalToggle, billToggle, scheduleToggle] = formToggles;
+
+const toggleForms = (toggler, targetForm, form1, form2) => {
+	toggler.addEventListener(click, () => {
+		if (
+			!targetForm.classList.contains(flexActive) &&
+			!form1.classList.contains(flexActive) &&
+			form2.classList.contains(flexActive)
+		) {
+			toggleClass(targetForm, flexActive);
+			toggleClass(form2, flexActive);
+		} else if (
+			!targetForm.classList.contains(flexActive) &&
+			form1.classList.contains(flexActive) &&
+			!form2.classList.contains(flexActive)
+		) {
+			toggleClass(targetForm, flexActive);
+			toggleClass(form1, flexActive);
+		}
+	});
+};
+
+toggleForms(billToggle, billForm, scheduleForm, portalForm);
+toggleForms(scheduleToggle, scheduleForm, portalForm, billForm);
+toggleForms(portalToggle, portalForm, billForm, scheduleForm);

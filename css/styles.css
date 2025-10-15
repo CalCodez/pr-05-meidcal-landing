@@ -490,7 +490,7 @@
 .pay-bill-form,
 .schedule-appointment-form {
 	height: 600px;
-
+	display: none;
 	width: 95%;
 	background: rgba(26, 45, 66, 0.8);
 	border-radius: 10px;
