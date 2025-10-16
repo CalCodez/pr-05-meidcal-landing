@@ -430,16 +430,17 @@
 
 .patient-care-nav-container {
 	width: 100%;
-	height: 80px;
+	height: 100px;
 	justify-content: space-between;
 	padding: 0 10px;
 	position: relative;
+	border-bottom: 3px outset var(--project-color-dark);
 }
 
 .patient-center-header-text {
-	font-size: 3rem;
+	font-size: 3.2em;
 	color: var(--project-color-dark);
-	text-shadow: 3px 3px 3px var(--accent-blue);
+	text-shadow: 1px 2px 3px var(--project-color-light);
 }
 
 .patient-toggle-container {
@@ -469,27 +470,38 @@
 }
 
 .patient-text-container {
-	height: 680px;
+	height: 400px;
 	width: 400px;
 	flex-direction: column;
 	transition: width ease 0.9s;
-	row-gap: 30px;
+	margin-top: 40px;
+	/* justify-content: start; */
+	text-align: center;
+	outline: var(--ol);
+	align-self: baseline;
 }
 
 .patient-center-text-header {
 	font-size: 2rem;
 	color: var(--project-color-light);
-	text-align: center;
+	margin-bottom: 15px;
+	text-shadow: 3px 3px 3px var(--black);
+}
+
+.patient-text-hr {
+	width: 80%;
+	border: 2px outset var(--project-color-dark);
+	text-shadow: 2px 2px 2px var(--project-color-light);
+	margin-bottom: 10px;
 }
 
 .patient-center-text {
-	font-size: 18px;
+	font-size: 20px;
 	color: var(--project-color-light);
 	text-shadow: 1px 1px 1px var(--black);
-	line-height: 1.3;
+	line-height: 1.6;
 	font-weight: 600;
-	letter-spacing: 1.5px;
-	text-align: center;
+	letter-spacing: 1.1px;
 }
 
 .patient-form-container {

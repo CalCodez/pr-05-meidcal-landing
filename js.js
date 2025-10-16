@@ -19,8 +19,8 @@ const heroSection = getById('hero-section');
 const servicesSection = getById('services-section');
 const patientCenterSection = getById('patient-center-section');
 
-// hideSection(heroSection);
-// hideSection(servicesSection);
+hideSection(heroSection);
+hideSection(servicesSection);
 // hideSection(patientCenterSection);
 
 //NOTE: HTML SECTIONs ^
