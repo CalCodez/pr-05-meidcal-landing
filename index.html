@@ -521,28 +521,27 @@
 				<i id="patient-mobile-menu-toggle" class="fa-solid fa-bars"></i>
 
 				<div id="patient-mobile-menu" class="container patient-mobile-menu">
-					<span class="patient-toggle mobile-patient-toggle">Patient Portal</span>
+					<!-- <span class="patient-toggle mobile-patient-toggle">Patient Portal</span>
 					<span class="patient-toggle mobile-patient-toggle">Pay Bill</span>
-					<span class="patient-toggle mobile-patient-toggle">Schedule Appointment</span>
+					<span class="patient-toggle mobile-patient-toggle">Schedule Appointment</span> -->
 				</div>
 			</div>
 
-			<div class="patient-center-text-form-container container">
-				<div class="patient-text-container container">
-					<h3 class="patient-center-text-header">
-						All Your ECM Needs <br />
-						Online
-					</h3>
-					<hr class="patient-text-hr" />
-					<p class="patient-center-text">
-						Eterna Care Medical is committed to providing patients with secure and seamless access
-						to their healthcare information. Through our comprehensive online portal, you can review
-						your medical records, communicate directly with your healthcare provider, schedule or
-						manage appointments, and make payments with ease.
-					</p>
-				</div>
-
+			<div class="patient-forms-wrapper-container container">
 				<div class="patient-form-container container">
+					<div class="from-cover-container container">
+						<div class="cover-icon-container">
+							<i class="fa-solid fa-user"></i>
+							<h2 class="form-cover-header">Portal</h2>
+						</div>
+
+						<p class="cover-text">
+							Log In to Your Patient Portal Access your health information securely anytime. View
+							medical records, chat with your provider, schedule appointments, make payments, and
+							manage your care—all in one convenient place.
+						</p>
+						<i class="fa-solid fa-circle-arrow-up cover-btn patient-toggle"></i>
+					</div>
 					<!-- **Patient Portal Form -->
 					<form id="portal-form" class="patient-portal-form container flex-active">
 						<h2 class="from-header-text">Patient Portal</h2>
@@ -564,7 +563,20 @@
 						</div>
 						<a href="#">Create An Account?</a>
 					</form>
-
+				</div>
+				<div class="patient-form-container">
+					<div class="from-cover-container container">
+						<div class="cover-icon-container">
+							<i class="fa-solid fa-hand-holding-dollar"></i>
+							<h2 class="form-cover-header">Payment</h2>
+						</div>
+						<p class="cover-text">
+							Make a secure online payment quickly and easily without logging in. Pay your bill,
+							confirm your details, and complete your transaction safely—all from the convenience of
+							your device in just a few simple steps.
+						</p>
+						<i class="fa-solid fa-circle-arrow-up cover-btn patient-toggle"></i>
+					</div>
 					<!-- **Pay Bill Form -->
 					<form id="bill-form" class="pay-bill-form container">
 						<h2 class="from-header-text">Pay Bill</h2>
@@ -600,9 +612,22 @@
 							<span class="static-toggles pay-bill-toggles btn">Cancel</span>
 						</div>
 					</form>
+				</div>
+				<!-- **Schedule Appointment Form -->
+				<div class="patient-form-container">
+					<div class="from-cover-container container">
+						<div class="cover-icon-container">
+							<i class="fa-solid fa-calendar-plus"></i>
+							<h2 class="form-cover-header">Appointments</h2>
+						</div>
 
-					<!-- **Schedule Appointment Form -->
-
+						<p class="cover-text">
+							Easily schedule your appointment in just a few simple steps. Select your preferred
+							date, time, and care provider, enter your information, and confirm your visit
+							securely—all from the convenience of your device anytime.
+						</p>
+						<i class="fa-solid fa-circle-arrow-up cover-btn patient-toggle"></i>
+					</div>
 					<form class="schedule-appointment-form container" id="schedule-form">
 						<h2 class="from-header-text">Schedule Appointment</h2>
 						<div class="input-container container">
