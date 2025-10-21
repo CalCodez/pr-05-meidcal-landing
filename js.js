@@ -141,29 +141,26 @@ const formToggles = selectAll('.patient-toggle');
 const portalToggles = [formToggles[0], formToggles[3]];
 const billToggles = [formToggles[1], formToggles[4]];
 const scheduleToggles = [formToggles[2], formToggles[5]];
+const coverActive = 'form-cover-active';
+const formCovers = selectAll('.form-cover-container');
+const [portalCover, billCover, scheduleCover] = formCovers;
 
-const toggleForms = (arrOfToggles, targetForm, form1, form2) => {
+console.log(formCovers);
+
+const toggleForms = (arrOfToggles, cover, form) => {
 	for (let toggler of arrOfToggles) {
 		toggler.addEventListener(click, () => {
-			if (
-				!targetForm.classList.contains(flexActive) &&
-				!form1.classList.contains(flexActive) &&
-				form2.classList.contains(flexActive)
-			) {
-				toggleClass(targetForm, flexActive);
-				toggleClass(form2, flexActive);
-			} else if (
-				!targetForm.classList.contains(flexActive) &&
-				form1.classList.contains(flexActive) &&
-				!form2.classList.contains(flexActive)
-			) {
-				toggleClass(targetForm, flexActive);
-				toggleClass(form1, flexActive);
+			if (!cover.classList.contains(coverActive)) {
+				toggleClass(cover, coverActive);
+				form.style.visibility = 'visible';
+			} else {
+				toggleClass(cover, coverActive);
+				form.style.visibility = 'hidden';
 			}
 		});
 	}
 };
 
-toggleForms(billToggles, billForm, scheduleForm, portalForm);
-toggleForms(scheduleToggles, scheduleForm, portalForm, billForm);
-toggleForms(portalToggles, portalForm, billForm, scheduleForm);
+toggleForms(portalToggles, portalCover, portalForm);
+toggleForms(billToggles, billCover, billForm);
+toggleForms(scheduleToggles, scheduleCover, scheduleForm);

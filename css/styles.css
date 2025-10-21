@@ -476,25 +476,37 @@
 	text-shadow: 3px 3px 3px var(--black);
 }
 
-.patient-form-container {
-	width: 460px;
-	height: 680px;
-	transition: width ease 0.9s;
-	position: relative;
-}
-
-.from-cover-container {
-	height: 80%;
-	width: 100%;
+.form-cover-container {
+	height: 90%;
+	width: 95%;
 	display: flex;
 	position: absolute;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: start;
+	align-self: start;
+	background: rgba(26, 45, 66, 0.8);
+	border-radius: 20px;
+	box-shadow: 2px 2px 8px 3px var(--black);
+	row-gap: 30px;
+	padding-top: 10px;
+}
+
+.form-cover-active {
+	height: 80px;
+	padding-top: 0;
+	box-shadow: none;
+	background-color: transparent;
+	transition: height ease 0.4s;
+}
+
+.form-cover-active .cover-text,
+.form-cover-active .patient-toggle {
+	display: none;
 }
 
 .cover-icon-container {
-	width: 90%;
-	height: 120px;
+	width: 100%;
+	height: 60px;
 	display: flex;
 	padding-left: 10px;
 	align-items: baseline;
@@ -504,20 +516,20 @@
 }
 
 .cover-icon-container > i {
-	width: 100px;
-	height: 100px;
+	width: 50px;
+	height: 50px;
 	border: 2px solid var(--project-color-light);
 	place-content: center;
 	text-align: center;
 	color: var(--project-color-light);
-	font-size: 3rem;
+	font-size: 2rem;
 	border-radius: 50%;
 	text-shadow: 3px 2px 2px var(--project-color-dark);
 }
 
 .form-cover-header {
 	color: var(--project-color-light);
-	font-size: 2.5rem;
+	font-size: 2rem;
 	place-content: center;
 	height: fit-content;
 	margin-left: 20px;
@@ -527,10 +539,11 @@
 .cover-text {
 	height: 220px;
 	width: 90%;
-	font-size: 24px;
+	font-size: 20px;
 	color: var(--project-color-light);
 	word-break: break-word;
 	hyphens: auto;
+	line-height: 1.5;
 }
 
 .cover-btn {
@@ -548,6 +561,12 @@
 /* ** Patient Forms */
 
 /* ++Patient Portal */
+.patient-form-container {
+	width: 460px;
+	height: 700px;
+	transition: width ease 0.9s;
+	position: relative;
+}
 
 .patient-portal-form,
 .pay-bill-form,
@@ -560,7 +579,9 @@
 	box-shadow: 2px 2px 8px 5px var(--project-color-dark);
 	flex-direction: column;
 	justify-content: space-around;
-	/* visibility: hidden; */
+	visibility: hidden;
+	margin-top: 70px;
+	display: flex;
 }
 
 /* .patient-portal-form {
