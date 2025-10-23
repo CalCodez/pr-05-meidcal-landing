@@ -138,6 +138,9 @@ const formToggles = selectAll('.patient-toggle');
 const coverText = selectAll('.cover-text');
 const formCovers = selectAll('.form-cover-container');
 const formCoverHeader = selectAll('.form-cover-header');
+const patientFormContainer = selectAll('.patient-form-container');
+
+console.log(patientFormContainer);
 
 const formsObj = {
 	portal: {
@@ -147,6 +150,7 @@ const formsObj = {
 		form: portalForm,
 		formCoverHeader: formCoverHeader[0],
 		headerText: ['Log In', 'Portal'],
+		formContainer: patientFormContainer[0],
 	},
 
 	bill: {
@@ -155,7 +159,8 @@ const formsObj = {
 		coverText: coverText[1],
 		form: billForm,
 		formCoverHeader: formCoverHeader[1],
-		headerText: ['Pay Bill', 'Payment'],
+		headerText: ['Pay Bill', 'Payments'],
+		formContainer: patientFormContainer[1],
 	},
 
 	schedule: {
@@ -165,6 +170,7 @@ const formsObj = {
 		form: scheduleForm,
 		formCoverHeader: formCoverHeader[2],
 		headerText: ['Schedule Now', 'Appointments'],
+		formContainer: patientFormContainer[2],
 	},
 };
 
@@ -182,6 +188,11 @@ const toggleForms = (obj) => {
 				toggleClass(obj.toggles[1], flexInactive);
 				toggleClass(obj.coverText, flexInactive);
 				textContent(obj.formCoverHeader, obj.headerText[0]);
+				obj.formContainer.style.height = '520';
+
+				if (window.innerWidth < 467) {
+					textContent(schedule.formCoverHeader, 'Schedule');
+				}
 			} else {
 				toggleClass(obj.cover, coverActive);
 				obj.form.style.visibility = 'hidden';
@@ -189,6 +200,7 @@ const toggleForms = (obj) => {
 				toggleClass(obj.toggles[1], flexInactive);
 				toggleClass(obj.coverText, flexInactive);
 				textContent(obj.formCoverHeader, obj.headerText[1]);
+				obj.formContainer.style.height = '400px';
 			}
 		});
 	}

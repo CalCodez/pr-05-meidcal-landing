@@ -39,9 +39,13 @@
 	.ceo-container {
 		flex-direction: column;
 	}
+
+	.patient-forms-wrapper-container {
+		justify-content: center;
+	}
 }
 
-/* ++Styles for the trash ass ipad */
+/* ++Styles for the ipad */
 
 @media (max-width: 467px) {
 	#menu-toggler {
@@ -64,6 +68,16 @@
 	.services-header-text {
 		font-size: 1.8rem;
 		text-align: center;
+	}
+
+	.patient-care-header-container {
+		justify-content: center;
+	}
+	.patient-center-header-text {
+		font-size: 3rem;
+	}
+	.patient-forms-wrapper-container {
+		gap: 60px;
 	}
 }
 
@@ -144,5 +158,43 @@
 		font-size: 1.2rem;
 		width: 90%;
 		line-height: 1.8;
+	}
+
+	.patient-center-header-text {
+		font-size: 2.5rem;
+	}
+
+	.form-cover-container {
+		border-radius: 8px;
+	}
+
+	.form-cover-header {
+		font-size: 1.8rem;
+	}
+
+	.cover-text {
+		line-height: 1.2;
+		text-align: justify;
+	}
+
+	.cover-btn {
+		height: 40px;
+		width: 40px;
+		font-size: 1.5rem;
+	}
+
+	.cover-icon-container > i {
+		width: 40px;
+		height: 40px;
+	}
+	.inputs {
+		width: 95%;
+		border-radius: 5px;
+	}
+
+	.static-toggles {
+		width: 100px;
+		height: 35px;
+		border-radius: 10px;
 	}
 }
