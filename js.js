@@ -42,7 +42,6 @@ const mobileLinks = selectAll('.mobile-nav-links');
 //``Patient Center Mobile Menu Vars
 const patientMenuToggler = getById('patient-mobile-menu-toggle');
 const patientMenu = getById('patient-mobile-menu');
-const mobilePatientToggles = selectAll('.mobile-patient-toggle');
 
 const menuToggle = (toggler, menu, arr) => {
 	toggler.addEventListener(click, () => {
@@ -82,7 +81,6 @@ const menuToggle = (toggler, menu, arr) => {
 };
 
 menuToggle(menuToggler, mobileMenu, mobileLinks);
-menuToggle(patientMenuToggler, patientMenu, mobilePatientToggles);
 
 //Services Card Curtain Vars and Function
 const curtainToggles = selectAll('.service-card-view-more-btn');
@@ -137,30 +135,65 @@ const billForm = getById('bill-form');
 const scheduleForm = getById('schedule-form');
 
 const formToggles = selectAll('.patient-toggle');
-
-const portalToggles = [formToggles[0], formToggles[3]];
-const billToggles = [formToggles[1], formToggles[4]];
-const scheduleToggles = [formToggles[2], formToggles[5]];
-const coverActive = 'form-cover-active';
+const coverText = selectAll('.cover-text');
 const formCovers = selectAll('.form-cover-container');
-const [portalCover, billCover, scheduleCover] = formCovers;
+const formCoverHeader = selectAll('.form-cover-header');
 
-console.log(formCovers);
+const formsObj = {
+	portal: {
+		toggles: [formToggles[0], formToggles[1]],
+		cover: formCovers[0],
+		coverText: coverText[0],
+		form: portalForm,
+		formCoverHeader: formCoverHeader[0],
+		headerText: ['Log In', 'Portal'],
+	},
 
-const toggleForms = (arrOfToggles, cover, form) => {
-	for (let toggler of arrOfToggles) {
-		toggler.addEventListener(click, () => {
-			if (!cover.classList.contains(coverActive)) {
-				toggleClass(cover, coverActive);
-				form.style.visibility = 'visible';
+	bill: {
+		toggles: [formToggles[2], formToggles[3]],
+		cover: formCovers[1],
+		coverText: coverText[1],
+		form: billForm,
+		formCoverHeader: formCoverHeader[1],
+		headerText: ['Pay Bill', 'Payment'],
+	},
+
+	schedule: {
+		toggles: [formToggles[4], formToggles[5]],
+		cover: formCovers[2],
+		coverText: coverText[2],
+		form: scheduleForm,
+		formCoverHeader: formCoverHeader[2],
+		headerText: ['Schedule Now', 'Appointments'],
+	},
+};
+
+const { portal, bill, schedule } = formsObj;
+
+const coverActive = 'form-cover-active';
+
+const toggleForms = (obj) => {
+	for (let toggle of obj.toggles) {
+		toggle.addEventListener(click, () => {
+			if (!obj.cover.classList.contains(coverActive)) {
+				toggleClass(obj.cover, coverActive);
+				obj.form.style.visibility = 'visible';
+				toggleClass(obj.toggles[0], flexActive);
+				toggleClass(obj.toggles[1], flexInactive);
+				toggleClass(obj.coverText, flexInactive);
+				textContent(obj.formCoverHeader, obj.headerText[0]);
 			} else {
-				toggleClass(cover, coverActive);
-				form.style.visibility = 'hidden';
+				toggleClass(obj.cover, coverActive);
+				obj.form.style.visibility = 'hidden';
+				toggleClass(obj.toggles[0], flexActive);
+				toggleClass(obj.toggles[1], flexInactive);
+				toggleClass(obj.coverText, flexInactive);
+				textContent(obj.formCoverHeader, obj.headerText[1]);
 			}
 		});
 	}
 };
 
-toggleForms(portalToggles, portalCover, portalForm);
-toggleForms(billToggles, billCover, billForm);
-toggleForms(scheduleToggles, scheduleCover, scheduleForm);
+toggleForms(portal);
+toggleForms(bill);
+toggleForms(schedule);

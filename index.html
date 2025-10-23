@@ -509,30 +509,17 @@
 		<section id="patient-center-section" class="patient-center-section">
 			<img src="./assets/backgrounds/medial-bg.jpg" alt="medial-bg" />
 
-			<div class="patient-care-nav-container container">
+			<div class="patient-care-header-container container">
 				<h2 class="patient-center-header-text">Patient Center</h2>
-
-				<div class="patient-toggle-container container">
-					<span class="patient-toggle">Patient Portal</span>
-					<span class="patient-toggle">Pay Bill</span>
-					<span class="patient-toggle">Schedule Appointment</span>
-				</div>
-
-				<i id="patient-mobile-menu-toggle" class="fa-solid fa-bars"></i>
-
-				<div id="patient-mobile-menu" class="container patient-mobile-menu">
-					<!-- <span class="patient-toggle mobile-patient-toggle">Patient Portal</span>
-					<span class="patient-toggle mobile-patient-toggle">Pay Bill</span>
-					<span class="patient-toggle mobile-patient-toggle">Schedule Appointment</span> -->
-				</div>
 			</div>
 
 			<div class="patient-forms-wrapper-container container">
 				<div class="patient-form-container container">
 					<div class="form-cover-container container">
 						<div class="cover-icon-container">
-							<i class="fa-solid fa-user"></i>
+							<i class="fa-solid fa-user icon-one"></i>
 							<h2 class="form-cover-header">Portal</h2>
+							<i class="fa-solid fa-circle-arrow-down cover-btn patient-toggle"></i>
 						</div>
 
 						<p class="cover-text">
@@ -544,7 +531,7 @@
 					</div>
 					<!-- **Patient Portal Form -->
 					<form id="portal-form" class="patient-portal-form container">
-						<h2 class="from-header-text">Patient Portal</h2>
+						<!-- <h2 class="from-header-text">Patient Portal</h2> -->
 						<div class="input-container container">
 							<input
 								class="container inputs"
@@ -569,6 +556,7 @@
 						<div class="cover-icon-container">
 							<i class="fa-solid fa-hand-holding-dollar"></i>
 							<h2 class="form-cover-header">Payment</h2>
+							<i class="fa-solid fa-circle-arrow-down cover-btn patient-toggle"></i>
 						</div>
 						<p class="cover-text">
 							Make a secure online payment quickly and easily without logging in. Pay your bill,
@@ -579,14 +567,13 @@
 					</div>
 					<!-- **Pay Bill Form -->
 					<form id="bill-form" class="pay-bill-form container">
-						<h2 class="from-header-text">Pay Bill</h2>
+						<!-- <h2 class="from-header-text">Pay Bill</h2> -->
 						<div class="input-container container">
 							<input
 								class="container inputs"
 								name="payment acc number"
 								type="number"
 								placeholder="Account #" />
-							<label for="payment acc number">Enter Account Number</label>
 
 							<input
 								class="container inputs"
@@ -596,7 +583,6 @@
 								step="0.01"
 								inputmode="decimal"
 								placeholder="$0.00" />
-							<label for="pay bill amount">Enter Payment Amount</label>
 
 							<select class="inputs" name="payment method">
 								<option value="credit">Select Payment Option</option>
@@ -604,8 +590,6 @@
 								<option value="debit">Debit</option>
 								<option value="checking">Checking</option>
 							</select>
-
-							<label for="payment method">Select Payment Method</label>
 						</div>
 						<div class="form-button-container container">
 							<span class="static-toggles pay-bill-toggles btn">Submit</span>
@@ -619,6 +603,7 @@
 						<div class="cover-icon-container">
 							<i class="fa-solid fa-calendar-plus"></i>
 							<h2 class="form-cover-header">Appointments</h2>
+							<i class="fa-solid fa-circle-arrow-down cover-btn patient-toggle"></i>
 						</div>
 
 						<p class="cover-text">
@@ -629,23 +614,22 @@
 						<i class="fa-solid fa-circle-arrow-up cover-btn patient-toggle"></i>
 					</div>
 					<form class="schedule-appointment-form container" id="schedule-form">
-						<h2 class="from-header-text">Schedule Appointment</h2>
+						<!-- <h2 class="from-header-text">Schedule Now</h2> -->
 						<div class="input-container container">
 							<input
 								class="container inputs"
 								name="first name"
 								type="text"
 								placeholder="First Name" />
-							<label for="first name">Enter First Name</label>
 
 							<input
 								class="container inputs"
 								name="last name"
 								type="text"
 								placeholder="Last Name" />
-							<label for="last name">Enter Last Name</label>
 
 							<select class="inputs" name="provider" id="payment-method">
+								<option value="#">Provider Name</option>
 								<option value="#">Dr. Marcus Ellery, MD</option>
 								<option value="#">Dr. Sophia Tran, DO</option>
 								<option value="#">Dr. Benjamin Hart, PhD</option>
@@ -659,16 +643,14 @@
 								<option value="#">Provider Not Listed</option>
 							</select>
 
-							<label for="provider">Select Provider</label>
 							<input
 								class="container inputs date-input"
 								name="date"
 								type="date"
 								placeholder="First Name" />
-							<label for="date">Select Date</label>
 						</div>
 						<div class="form-button-container container">
-							<span class="static-toggles pay-bill-toggles btn">Schedule Now</span>
+							<span class="static-toggles pay-bill-toggles btn">Schedule</span>
 							<span class="static-toggles pay-bill-toggles btn">Cancel</span>
 						</div>
 					</form>

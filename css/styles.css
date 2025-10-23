@@ -428,7 +428,7 @@
 	z-index: -1;
 }
 
-.patient-care-nav-container {
+.patient-care-header-container {
 	width: 100%;
 	height: 100px;
 	justify-content: space-between;
@@ -443,30 +443,13 @@
 	text-shadow: 1px 2px 3px var(--project-color-light);
 }
 
-.patient-toggle-container {
-	height: 75px;
-	width: 400px;
-	justify-content: space-around;
-}
-
-.patient-toggle {
-	text-align: center;
-}
-
-.mobile-patient-toggle {
-	width: 180px;
-	height: 30px;
-	border-radius: 5px;
-	box-shadow: 2px 2px 8px 2px var(--accent-blue);
-	display: none;
-}
-
 .patient-forms-wrapper-container {
 	height: auto;
 	width: 95%;
-	padding: 8px;
+	padding: 15px;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
+	gap: 20px;
 }
 
 .patient-center-text-header {
@@ -477,7 +460,7 @@
 }
 
 .form-cover-container {
-	height: 90%;
+	height: 80%;
 	width: 95%;
 	display: flex;
 	position: absolute;
@@ -488,7 +471,7 @@
 	border-radius: 20px;
 	box-shadow: 2px 2px 8px 3px var(--black);
 	row-gap: 30px;
-	padding-top: 10px;
+	padding: 10px 0;
 }
 
 .form-cover-active {
@@ -496,16 +479,11 @@
 	padding-top: 0;
 	box-shadow: none;
 	background-color: transparent;
-	transition: height ease 0.4s;
-}
-
-.form-cover-active .cover-text,
-.form-cover-active .patient-toggle {
-	display: none;
+	transition: all ease-out 0.4s;
 }
 
 .cover-icon-container {
-	width: 100%;
+	width: 95%;
 	height: 60px;
 	display: flex;
 	padding-left: 10px;
@@ -513,18 +491,36 @@
 	padding-top: 10px;
 	border-radius: 15px;
 	background: linear-gradient(90deg, var(--accent-blue), var(--project-color-dark));
+	position: relative;
 }
 
-.cover-icon-container > i {
+.fa-circle-arrow-down {
+	position: absolute;
+	right: 10px;
+}
+
+.cover-icon-container > i,
+.cover-btn {
 	width: 50px;
 	height: 50px;
-	border: 2px solid var(--project-color-light);
 	place-content: center;
 	text-align: center;
 	color: var(--project-color-light);
-	font-size: 2rem;
+	font-size: 1.5rem;
 	border-radius: 50%;
+	box-shadow: 1px 1px 5px 1px var(--black);
 	text-shadow: 3px 2px 2px var(--project-color-dark);
+	background: linear-gradient(90deg, var(--accent-blue), var(--project-color-dark));
+}
+
+.cover-btn {
+	height: 60px;
+	width: 60px;
+	font-size: 2rem;
+}
+
+.fa-circle-arrow-down {
+	display: none;
 }
 
 .form-cover-header {
@@ -546,32 +542,21 @@
 	line-height: 1.5;
 }
 
-.cover-btn {
-	color: var(--project-color-light);
-	width: 70px;
-	height: 70px;
-	box-shadow: 1px 1px 5px 1px var(--black);
-	place-content: center;
-	text-align: center;
-	font-size: 2rem;
-	border-radius: 50%;
-	background: linear-gradient(90deg, var(--accent-blue), var(--project-color-dark));
-}
-
 /* ** Patient Forms */
 
 /* ++Patient Portal */
 .patient-form-container {
-	width: 460px;
-	height: 700px;
+	width: 440px;
+	height: 520px;
 	transition: width ease 0.9s;
 	position: relative;
+	outline: var(--olY);
 }
 
 .patient-portal-form,
 .pay-bill-form,
 .schedule-appointment-form {
-	height: 600px;
+	height: 430px;
 	display: none;
 	width: 95%;
 	background: rgba(26, 45, 66, 0.8);
@@ -582,19 +567,12 @@
 	visibility: hidden;
 	margin-top: 70px;
 	display: flex;
+	padding-bottom: 10px;
 }
-
-/* .patient-portal-form {
-	height: 70%;
-} */
 
 .from-header-text {
-	font-size: 3rem;
+	font-size: 2.3rem;
 	color: var(--project-color-light);
-}
-
-.schedule-appointment-form .from-header-text {
-	font-size: 2rem;
 }
 
 .input-container {
@@ -607,44 +585,38 @@
 .pay-bill-form .input-container,
 .schedule-appointment-form .input-container {
 	height: 300px;
-	justify-content: space-between;
 }
 
 .inputs {
 	width: 80%;
 	height: 45px;
 	border: 2px solid var(--project-color-dark);
-	border-radius: 12px;
+	border-radius: 10px;
 	color: var(--project-color-light);
 	padding-left: 5px;
-	box-shadow: 1px 1px 5px 1px var(--accent-blue);
+	box-shadow: 1px 1px 5px 1px var(--black);
 	background: var(--project-color-dark);
+	font-size: 1em;
+}
+
+.schedule-appointment-form .inputs {
+	width: 90%;
+	border-radius: 8px;
 }
 
 .inputs::placeholder {
 	color: var(--project-color-light);
-	font-size: 1rem;
+	font-size: 1em;
 	bottom: 5px;
 	padding-left: 5px;
 }
 
-label {
-	color: var(--accent-blue);
-	width: 75%;
-	text-shadow: 2px 2px 2px var(--black);
-	margin-top: -30px;
-}
-
-.schedule-appointment-form .input-container label {
-	margin-top: 0;
-}
-
 select {
-	font-size: 1rem;
+	font-size: 1em;
 }
 
 .date-input {
-	font-size: 1.2rem;
+	font-size: 1.2em;
 	color: var(--accent-blue);
 }
 
@@ -661,17 +633,17 @@ option {
 
 .form-button-container {
 	width: 95%;
-	height: 100px;
+	height: fit-content;
 	justify-content: space-evenly;
 }
 
 .static-toggles {
 	place-content: center;
 	text-align: center;
-	font-size: 20px;
+	font-size: 16px;
 	text-shadow: 1px 1px 1px var(--black);
 	background: var(--project-color-dark);
-	box-shadow: 1px 1px 2px 1px var(--accent-blue);
+	box-shadow: 1px 1px 2px 1px var(--black);
 }
 
 .schedule-appointment-form .static-toggles {
