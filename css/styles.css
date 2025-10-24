@@ -462,7 +462,7 @@
 }
 
 .form-cover-container {
-	height: 400px;
+	height: 100%;
 	width: 95%;
 	display: flex;
 	position: absolute;
@@ -472,7 +472,7 @@
 	background: rgba(26, 45, 66, 0.8);
 	border-radius: 20px;
 	box-shadow: 2px 2px 8px 3px var(--black);
-	row-gap: 30px;
+	row-gap: 60px;
 	padding: 10px 0;
 }
 
@@ -515,10 +515,19 @@
 	text-shadow: 3px 2px 2px var(--project-color-dark);
 	background: linear-gradient(90deg, var(--accent-blue), var(--project-color-dark));
 }
+
+.cover-icon-container > .patient-toggle {
+	width: 30px;
+	height: 30px;
+	font-size: 0.8rem;
+}
+
 .cover-btn {
-	height: 60px;
-	width: 60px;
-	font-size: 2rem;
+	width: 210px;
+	height: 50px;
+	border-radius: 8px;
+	font-size: 1.1em;
+	background: linear-gradient(90deg, var(--project-color-dark), var(--accent-blue));
 }
 
 .patient-toggle:hover {
@@ -549,7 +558,7 @@
 /* ++Patient Portal */
 .patient-form-container {
 	width: 440px;
-	height: 400px;
+	height: 520px;
 	transition: height ease 0.2s;
 	position: relative;
 }
@@ -591,7 +600,7 @@
 .inputs {
 	width: 80%;
 	height: 45px;
-	border: 2px solid var(--project-color-dark);
+	border: 2px groove var(--accent-blue);
 	border-radius: 10px;
 	color: var(--project-color-light);
 	padding-left: 5px;

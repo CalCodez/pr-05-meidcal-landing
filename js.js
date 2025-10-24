@@ -15,12 +15,12 @@ const hideSection = (section) => {
 	section.style.display = 'none';
 };
 
-const heroSection = getById('hero-section');
-const servicesSection = getById('services-section');
-const patientCenterSection = getById('patient-center-section');
+// const heroSection = getById('hero-section');
+// const servicesSection = getById('services-section');
+// const patientCenterSection = getById('patient-center-section');
 
-hideSection(heroSection);
-hideSection(servicesSection);
+// hideSection(heroSection);
+// hideSection(servicesSection);
 // hideSection(patientCenterSection);
 
 //NOTE: HTML SECTIONs ^
@@ -188,7 +188,7 @@ const toggleForms = (obj) => {
 				toggleClass(obj.toggles[1], flexInactive);
 				toggleClass(obj.coverText, flexInactive);
 				textContent(obj.formCoverHeader, obj.headerText[0]);
-				obj.formContainer.style.height = '520';
+				// obj.formContainer.style.height = '520';
 
 				if (window.innerWidth < 467) {
 					textContent(schedule.formCoverHeader, 'Schedule');
@@ -200,7 +200,7 @@ const toggleForms = (obj) => {
 				toggleClass(obj.toggles[1], flexInactive);
 				toggleClass(obj.coverText, flexInactive);
 				textContent(obj.formCoverHeader, obj.headerText[1]);
-				obj.formContainer.style.height = '400px';
+				// obj.formContainer.style.height = '400px';
 			}
 		});
 	}

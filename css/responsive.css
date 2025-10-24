@@ -177,16 +177,17 @@
 		text-align: justify;
 	}
 
-	.cover-btn {
-		height: 40px;
-		width: 40px;
-		font-size: 1.5rem;
-	}
-
 	.cover-icon-container > i {
 		width: 40px;
 		height: 40px;
 	}
+
+	.cover-icon-container > .patient-toggle {
+		width: 20px;
+		height: 20px;
+		font-size: 0.8rem;
+	}
+
 	.inputs {
 		width: 95%;
 		border-radius: 5px;
