@@ -15,14 +15,15 @@ const hideSection = (section) => {
 	section.style.display = 'none';
 };
 
-// const heroSection = getById('hero-section');
-// const servicesSection = getById('services-section');
-// const patientCenterSection = getById('patient-center-section');
+const heroSection = getById('hero-section');
+const servicesSection = getById('services-section');
+const patientCenterSection = getById('patient-center-section');
+const meetChiefSection = getById('meet-chiefs-section');
 
 // hideSection(heroSection);
 // hideSection(servicesSection);
 // hideSection(patientCenterSection);
-
+// hideSection(meetChiefSection);
 //NOTE: HTML SECTIONs ^
 
 //Global Project Vars

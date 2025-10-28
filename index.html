@@ -310,7 +310,175 @@
 					<em>Or More Importantly An Inconvenience...</em>
 				</h2>
 			</div>
+		</section>
+		<!-- !!Patient Center -->
+		<section id="patient-center-section" class="patient-center-section">
+			<img src="./assets/backgrounds/medial-bg.jpg" alt="medial-bg" />
 
+			<!-- !!Find Care Container -->
+			<div class="find-care-container container">
+				<div class="patient-care-header-container container">
+					<h2 class="patient-center-header-text">Find Care Now</h2>
+				</div>
+				<p class="search-heading-text">
+					Quickly search doctors, specialties, and services across our network. Schedule
+					appointments, explore treatment options, and connect with trusted providers—all designed
+					for your convenience.
+				</p>
+
+				<div class="search-container container">
+					<input type="text" class="search-input" placeholder="Find Care.. " />
+					<i class="fa-solid fa-magnifying-glass"> </i>
+				</div>
+			</div>
+
+			<div class="patient-care-header-container container">
+				<h2 class="patient-center-header-text">Patient Center</h2>
+			</div>
+
+			<div class="patient-forms-wrapper-container container">
+				<div class="patient-form-container container">
+					<div class="form-cover-container container">
+						<div class="cover-icon-container">
+							<i class="fa-solid fa-user icon-one"></i>
+							<h2 class="form-cover-header">Portal</h2>
+							<i class="fa-solid fa-x cover-btn patient-toggle"></i>
+						</div>
+
+						<p class="cover-text">
+							Log In to Your Patient Portal Access your health information securely anytime. View
+							medical records, chat with your provider, schedule appointments, make payments, and
+							manage your care—all in one convenient place.
+						</p>
+						<button class="cover-btn patient-toggle temp-btn">Log In</button>
+					</div>
+					<!-- **Patient Portal Form -->
+					<form id="portal-form" class="patient-portal-form container">
+						<div class="input-container container">
+							<input
+								class="container inputs"
+								name="portal-username"
+								type="text"
+								placeholder="Username" />
+							<input
+								class="container inputs"
+								name="portal-password"
+								type="password"
+								placeholder="Password" />
+						</div>
+						<div class="form-button-container container">
+							<span class="static-toggles btn">Login</span>
+							<span class="static-toggles btn">Cancel</span>
+						</div>
+						<a href="#">Create An Account?</a>
+					</form>
+				</div>
+				<div class="patient-form-container container">
+					<div class="form-cover-container container">
+						<div class="cover-icon-container">
+							<i class="fa-solid fa-hand-holding-dollar"></i>
+							<h2 class="form-cover-header">Payments</h2>
+							<i class="fa-solid fa-x cover-btn patient-toggle"></i>
+						</div>
+						<p class="cover-text">
+							Make a secure online payment quickly and easily without logging in. Pay your bill,
+							confirm your details, and complete your transaction safely—all from the convenience of
+							your device in just a few simple steps.
+						</p>
+						<button class="cover-btn patient-toggle">Make Payment</button>
+					</div>
+					<!-- **Pay Bill Form -->
+					<form id="bill-form" class="pay-bill-form container">
+						<div class="input-container container">
+							<input
+								class="container inputs"
+								name="payment acc number"
+								type="number"
+								placeholder="Account #" />
+
+							<input
+								class="container inputs"
+								name="pay bill amount"
+								type="number"
+								min="0"
+								step="0.01"
+								inputmode="decimal"
+								placeholder="$0.00" />
+
+							<select class="inputs" name="payment method">
+								<option value="credit">Select Payment Option</option>
+								<option value="credit">Credit</option>
+								<option value="debit">Debit</option>
+								<option value="checking">Checking</option>
+							</select>
+						</div>
+						<div class="form-button-container container">
+							<span class="static-toggles pay-bill-toggles btn">Submit</span>
+							<span class="static-toggles pay-bill-toggles btn">Cancel</span>
+						</div>
+					</form>
+				</div>
+				<!-- **Schedule Appointment Form -->
+				<div class="patient-form-container container">
+					<div class="form-cover-container container">
+						<div class="cover-icon-container">
+							<i class="fa-solid fa-calendar-plus"></i>
+							<h2 class="form-cover-header">Appointments</h2>
+							<i class="fa-solid fa-x cover-btn patient-toggle"></i>
+						</div>
+
+						<p class="cover-text">
+							Easily schedule your appointment in just a few simple steps. Select your preferred
+							date, time, and care provider, enter your information, and confirm your visit
+							securely—all from the convenience of your device anytime.
+						</p>
+						<button class="cover-btn patient-toggle">Schedule Appointment</button>
+					</div>
+					<form class="schedule-appointment-form container" id="schedule-form">
+						<div class="input-container container">
+							<input
+								class="container inputs"
+								name="first name"
+								type="text"
+								placeholder="First Name" />
+
+							<input
+								class="container inputs"
+								name="last name"
+								type="text"
+								placeholder="Last Name" />
+
+							<select class="inputs" name="provider" id="payment-method">
+								<option value="#">Provider Name</option>
+								<option value="#">Dr. Marcus Ellery, MD</option>
+								<option value="#">Dr. Sophia Tran, DO</option>
+								<option value="#">Dr. Benjamin Hart, PhD</option>
+								<option value="#">Dr. Lila Gomez, DNP</option>
+								<option value="#">Dr. Carter Reeves, DDS</option>
+								<option value="#">Dr. Naomi Patel, MD</option>
+								<option value="#">Dr. Elijah Brooks, PsyD</option>
+								<option value="#">Dr. Avery Chen, DPM</option>
+								<option value="#">Dr. Renee Wallace, MD, MPH</option>
+								<option value="#">Dr. Daniel Okafor, PhD</option>
+								<option value="#">Provider Not Listed</option>
+							</select>
+
+							<input
+								class="container inputs date-input"
+								name="date"
+								type="date"
+								placeholder="First Name" />
+						</div>
+						<div class="form-button-container container">
+							<span class="static-toggles pay-bill-toggles btn">Schedule</span>
+							<span class="static-toggles pay-bill-toggles btn">Cancel</span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<section id="meet-chiefs-section">
 			<div class="meet-chiefs-container container">
 				<div class="profile-card container">
 					<div class="container profile-img-container">
@@ -623,155 +791,6 @@
 						<i class="fa-brands fa-x-twitter"></i>
 						<i class="fa-brands fa-linkedin"></i>
 					</div>
-				</div>
-			</div>
-		</section>
-		<!-- !!Patient Center -->
-		<section id="patient-center-section" class="patient-center-section">
-			<img src="./assets/backgrounds/medial-bg.jpg" alt="medial-bg" />
-
-			<div class="patient-care-header-container container">
-				<h2 class="patient-center-header-text">Patient Center</h2>
-			</div>
-
-			<div class="patient-forms-wrapper-container container">
-				<div class="patient-form-container container">
-					<div class="form-cover-container container">
-						<div class="cover-icon-container">
-							<i class="fa-solid fa-user icon-one"></i>
-							<h2 class="form-cover-header">Portal</h2>
-							<i class="fa-solid fa-x cover-btn patient-toggle"></i>
-						</div>
-
-						<p class="cover-text">
-							Log In to Your Patient Portal Access your health information securely anytime. View
-							medical records, chat with your provider, schedule appointments, make payments, and
-							manage your care—all in one convenient place.
-						</p>
-						<button class="cover-btn patient-toggle temp-btn">Log In</button>
-					</div>
-					<!-- **Patient Portal Form -->
-					<form id="portal-form" class="patient-portal-form container">
-						<div class="input-container container">
-							<input
-								class="container inputs"
-								name="portal-username"
-								type="text"
-								placeholder="Username" />
-							<input
-								class="container inputs"
-								name="portal-password"
-								type="password"
-								placeholder="Password" />
-						</div>
-						<div class="form-button-container container">
-							<span class="static-toggles btn">Login</span>
-							<span class="static-toggles btn">Cancel</span>
-						</div>
-						<a href="#">Create An Account?</a>
-					</form>
-				</div>
-				<div class="patient-form-container container">
-					<div class="form-cover-container container">
-						<div class="cover-icon-container">
-							<i class="fa-solid fa-hand-holding-dollar"></i>
-							<h2 class="form-cover-header">Payments</h2>
-							<i class="fa-solid fa-x cover-btn patient-toggle"></i>
-						</div>
-						<p class="cover-text">
-							Make a secure online payment quickly and easily without logging in. Pay your bill,
-							confirm your details, and complete your transaction safely—all from the convenience of
-							your device in just a few simple steps.
-						</p>
-						<button class="cover-btn patient-toggle">Make Payment</button>
-					</div>
-					<!-- **Pay Bill Form -->
-					<form id="bill-form" class="pay-bill-form container">
-						<div class="input-container container">
-							<input
-								class="container inputs"
-								name="payment acc number"
-								type="number"
-								placeholder="Account #" />
-
-							<input
-								class="container inputs"
-								name="pay bill amount"
-								type="number"
-								min="0"
-								step="0.01"
-								inputmode="decimal"
-								placeholder="$0.00" />
-
-							<select class="inputs" name="payment method">
-								<option value="credit">Select Payment Option</option>
-								<option value="credit">Credit</option>
-								<option value="debit">Debit</option>
-								<option value="checking">Checking</option>
-							</select>
-						</div>
-						<div class="form-button-container container">
-							<span class="static-toggles pay-bill-toggles btn">Submit</span>
-							<span class="static-toggles pay-bill-toggles btn">Cancel</span>
-						</div>
-					</form>
-				</div>
-				<!-- **Schedule Appointment Form -->
-				<div class="patient-form-container container">
-					<div class="form-cover-container container">
-						<div class="cover-icon-container">
-							<i class="fa-solid fa-calendar-plus"></i>
-							<h2 class="form-cover-header">Appointments</h2>
-							<i class="fa-solid fa-x cover-btn patient-toggle"></i>
-						</div>
-
-						<p class="cover-text">
-							Easily schedule your appointment in just a few simple steps. Select your preferred
-							date, time, and care provider, enter your information, and confirm your visit
-							securely—all from the convenience of your device anytime.
-						</p>
-						<button class="cover-btn patient-toggle">Schedule Appointment</button>
-					</div>
-					<form class="schedule-appointment-form container" id="schedule-form">
-						<div class="input-container container">
-							<input
-								class="container inputs"
-								name="first name"
-								type="text"
-								placeholder="First Name" />
-
-							<input
-								class="container inputs"
-								name="last name"
-								type="text"
-								placeholder="Last Name" />
-
-							<select class="inputs" name="provider" id="payment-method">
-								<option value="#">Provider Name</option>
-								<option value="#">Dr. Marcus Ellery, MD</option>
-								<option value="#">Dr. Sophia Tran, DO</option>
-								<option value="#">Dr. Benjamin Hart, PhD</option>
-								<option value="#">Dr. Lila Gomez, DNP</option>
-								<option value="#">Dr. Carter Reeves, DDS</option>
-								<option value="#">Dr. Naomi Patel, MD</option>
-								<option value="#">Dr. Elijah Brooks, PsyD</option>
-								<option value="#">Dr. Avery Chen, DPM</option>
-								<option value="#">Dr. Renee Wallace, MD, MPH</option>
-								<option value="#">Dr. Daniel Okafor, PhD</option>
-								<option value="#">Provider Not Listed</option>
-							</select>
-
-							<input
-								class="container inputs date-input"
-								name="date"
-								type="date"
-								placeholder="First Name" />
-						</div>
-						<div class="form-button-container container">
-							<span class="static-toggles pay-bill-toggles btn">Schedule</span>
-							<span class="static-toggles pay-bill-toggles btn">Cancel</span>
-						</div>
-					</form>
 				</div>
 			</div>
 		</section>
