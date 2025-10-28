@@ -104,6 +104,11 @@
 		width: 100%;
 	}
 
+	.service-card {
+		height: 320px;
+		width: 300px;
+	}
+
 	.ceo-dots:nth-child(1) {
 		left: 70px;
 		top: 20px;

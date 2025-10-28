@@ -86,3 +86,41 @@
 .profile-card:hover .profile-text-container > h5 {
 	color: var(--accent-blue);
 }
+
+/* **HealthCare Animation */
+
+.healthcare-span:after {
+	content: 'Impersonal';
+	animation: word 10s infinite;
+}
+
+@keyframes word {
+	0%,
+	14% {
+		content: 'Stressful';
+	}
+
+	15%,
+	28% {
+		content: 'Unreachable';
+	}
+	29%,
+	42% {
+		content: 'Uncaring';
+	}
+
+	43%,
+	56% {
+		content: 'A Compromise';
+	}
+
+	57%,
+	70% {
+		content: 'Inconvenient';
+	}
+
+	71%,
+	84% {
+		content: 'Delayed';
+	}
+}
