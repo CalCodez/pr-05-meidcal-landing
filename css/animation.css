@@ -49,21 +49,30 @@
 }
 
 /* **Chief Cards Hover Transition Styles */
-.profile-card:hover {
+.profile-card:hover,
+.exec-card:hover {
 	background-color: var(--project-color-dark);
 	color: var(--project-color-light);
-	transform: scale(1.2);
+	transform: scale(1.1);
 	border-radius: 15px;
 	transition: all ease 0.5s;
 	align-items: start;
 }
 
-.profile-card:hover .chief-social-container {
+.exec-card:hover h4,
+.exec-card:hover .exec-statement {
+	color: var(--project-color-light);
+}
+
+.profile-card:hover .chief-social-container,
+.exec-card:hover .exec-social-container {
 	width: 50px;
 	transition: width ease-in 0.2s;
 }
 
-.profile-card:hover .chief-social-container > i {
+.profile-card:hover .chief-social-container > i,
+.exec-card:hover .exec-social-container > i,
+.exec-card:hover .exec-quote-marks {
 	visibility: visible;
 	transition: visibility ease-in 0.8s;
 	color: var(--accent-blue);
@@ -83,44 +92,45 @@
 	align-items: start;
 }
 
-.profile-card:hover .profile-text-container > h5 {
+.profile-card:hover .profile-text-container > h5,
+.exec-card:hover h5 {
 	color: var(--accent-blue);
 }
 
 /* **HealthCare Animation */
 
 .healthcare-span:after {
-	content: 'Impersonal';
+	content: 'Impersonal.';
 	animation: word 10s infinite;
 }
 
 @keyframes word {
 	0%,
 	14% {
-		content: 'Stressful';
+		content: 'Stressful.';
 	}
 
 	15%,
 	28% {
-		content: 'Unreachable';
+		content: 'Unreachable.';
 	}
 	29%,
 	42% {
-		content: 'Uncaring';
+		content: 'Uncaring.';
 	}
 
 	43%,
 	56% {
-		content: 'A Compromise';
+		content: 'Detached.';
 	}
 
 	57%,
 	70% {
-		content: 'Inconvenient';
+		content: 'Confusing.';
 	}
 
 	71%,
 	84% {
-		content: 'Delayed';
+		content: 'Delayed.';
 	}
 }
