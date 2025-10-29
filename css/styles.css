@@ -393,12 +393,11 @@
 }
 
 .exec-card {
-	height: 300px;
+	height: 220px;
 	width: 440px;
-	border: 1px outset var(--accent-blue);
 	justify-content: flex-start;
 	background: rgba(212, 216, 221, 0.8);
-	border-radius: 2px;
+	border-radius: 10px;
 	box-shadow: 2px 2px 5px 3px var(--black);
 	row-gap: 18px;
 	position: relative;
@@ -431,6 +430,7 @@
 	line-height: 1.5;
 	text-align: center;
 	z-index: 2;
+	font-weight: 600;
 }
 
 .exec-img-wrapper {
@@ -515,7 +515,7 @@
 	width: 100%;
 	height: auto;
 	flex-direction: column;
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 	justify-content: start;
 	row-gap: 30px;
 }
@@ -526,6 +526,7 @@
 	color: var(--project-color-light);
 	text-align: center;
 	text-shadow: 2px 2px 2px var(--black);
+	margin-bottom: 10px;
 }
 
 .search-container {
@@ -567,9 +568,8 @@
 }
 
 .search-toggles-container {
-	width: 480px;
+	width: 600px;
 	height: 120px;
-	/* outline: var(--olY); */
 	justify-content: space-around;
 }
 
@@ -587,7 +587,7 @@
 	border-radius: 15px;
 	font-size: 18px;
 	cursor: pointer;
-	box-shadow: 2px 2px 4px 1px var(--black);
+	box-shadow: 2px 2px 1px 1px var(--black);
 	background-color: var(--project-color-light);
 	font-weight: 600;
 }
@@ -598,6 +598,12 @@
 	transition: all ease 0.3s;
 	color: var(--project-color-light);
 	background: linear-gradient(90deg, var(--accent-blue), var(--project-color-dark));
+}
+
+.search-hr {
+	width: 90%;
+	border: 4px outset var(--project-color-dark);
+	border-radius: 3px;
 }
 
 .patient-forms-wrapper-container {
