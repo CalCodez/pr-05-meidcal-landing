@@ -212,6 +212,7 @@
 
 	.search-container {
 		width: 305px;
+		margin-bottom: 30px;
 	}
 
 	.search-input::placeholder {
@@ -220,5 +221,21 @@
 
 	.fa-magnifying-glass {
 		font-size: 20px;
+	}
+
+	.search-toggles-container {
+		width: 300px;
+		height: auto;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		gap: 30px;
+		margin-bottom: 20px;
+	}
+
+	.search-toggle {
+		width: 60px;
+		height: 60px;
+		font-size: 16px;
+		padding: 10px;
 	}
 }

@@ -141,8 +141,6 @@ const formCovers = selectAll('.form-cover-container');
 const formCoverHeader = selectAll('.form-cover-header');
 const patientFormContainer = selectAll('.patient-form-container');
 
-console.log(patientFormContainer);
-
 const formsObj = {
 	portal: {
 		toggles: [formToggles[0], formToggles[1]],
