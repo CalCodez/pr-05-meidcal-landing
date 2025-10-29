@@ -140,6 +140,7 @@ const coverText = selectAll('.cover-text');
 const formCovers = selectAll('.form-cover-container');
 const formCoverHeader = selectAll('.form-cover-header');
 const patientFormContainer = selectAll('.patient-form-container');
+const coverIconContainers = selectAll('.cover-icon-container');
 
 const formsObj = {
 	portal: {
@@ -150,6 +151,7 @@ const formsObj = {
 		formCoverHeader: formCoverHeader[0],
 		headerText: ['Log In', 'Portal'],
 		formContainer: patientFormContainer[0],
+		coverIconContainer: coverIconContainers[0],
 	},
 
 	bill: {
@@ -160,6 +162,7 @@ const formsObj = {
 		formCoverHeader: formCoverHeader[1],
 		headerText: ['Pay Bill', 'Payments'],
 		formContainer: patientFormContainer[1],
+		coverIconContainer: coverIconContainers[1],
 	},
 
 	schedule: {
@@ -170,12 +173,16 @@ const formsObj = {
 		formCoverHeader: formCoverHeader[2],
 		headerText: ['Schedule Now', 'Appointments'],
 		formContainer: patientFormContainer[2],
+		coverIconContainer: coverIconContainers[2],
 	},
 };
 
 const { portal, bill, schedule } = formsObj;
 
 const coverActive = 'form-cover-active';
+const iconContainerActive = 'cover-icon-container-active';
+
+console.log(coverIconContainers);
 
 const toggleForms = (obj) => {
 	for (let toggle of obj.toggles) {
@@ -186,8 +193,8 @@ const toggleForms = (obj) => {
 				toggleClass(obj.toggles[0], flexActive);
 				toggleClass(obj.toggles[1], flexInactive);
 				toggleClass(obj.coverText, flexInactive);
+				toggleClass(obj.coverIconContainer, iconContainerActive);
 				textContent(obj.formCoverHeader, obj.headerText[0]);
-				// obj.formContainer.style.height = '520';
 
 				if (window.innerWidth < 467) {
 					textContent(schedule.formCoverHeader, 'Schedule');
@@ -198,8 +205,9 @@ const toggleForms = (obj) => {
 				toggleClass(obj.toggles[0], flexActive);
 				toggleClass(obj.toggles[1], flexInactive);
 				toggleClass(obj.coverText, flexInactive);
+				toggleClass(obj.coverIconContainer, iconContainerActive);
+
 				textContent(obj.formCoverHeader, obj.headerText[1]);
-				// obj.formContainer.style.height = '400px';
 			}
 		});
 	}

@@ -386,10 +386,10 @@
 	row-gap: 60px;
 	column-gap: 100px;
 	margin: 30px 0;
-	background: var(--project-color-light);
+	/* background: var(--project-color-dark); */
 	padding: 40px 20px;
 	border-radius: 20px;
-	box-shadow: 2px 2px 15px 5px var(--project-color-dark);
+	/* box-shadow: 2px 2px 15px 5px var(--project-color-dark); */
 }
 
 .exec-card {
@@ -407,7 +407,6 @@
 .exec-statement-container {
 	width: 50%;
 	height: 100%;
-	outline: var(--olB);
 	position: relative;
 	flex-direction: column;
 	justify-content: space-around;
@@ -472,7 +471,7 @@
 /* **Patient Center */
 
 .patient-center-section {
-	box-shadow: 2px 2px 10px 8px var(--project-color-dark);
+	/* box-shadow: 2px 2px 10px 8px var(--project-color-dark); */
 	border-radius: 10px;
 	position: relative;
 	background: linear-gradient(
@@ -634,7 +633,7 @@
 	background: rgba(26, 45, 66, 0.8);
 	border-radius: 20px;
 	box-shadow: 2px 2px 8px 3px var(--black);
-	row-gap: 60px;
+	row-gap: 30px;
 	padding: 10px 0;
 }
 
@@ -643,19 +642,38 @@
 	padding-top: 0;
 	box-shadow: none;
 	background-color: transparent;
-	transition: all ease-out 0.4s;
 }
 
 .cover-icon-container {
-	width: 95%;
-	height: 60px;
+	flex-direction: column;
+	justify-content: center;
+	height: 170px;
+	align-items: center;
+	row-gap: 20px;
+	width: 100%;
 	display: flex;
-	padding-left: 10px;
-	align-items: baseline;
-	padding-top: 10px;
+	width: 95%;
 	border-radius: 15px;
+	/* background: linear-gradient(var(--accent-blue), var(--project-color-dark)); */
+	transition: all ease 0.2s;
+}
+
+.cover-icon-container > i {
+	width: 80px;
+	height: 80px;
+	place-content: center;
+	text-align: center;
+	color: var(--project-color-light);
+	font-size: 3rem;
+	border-radius: 50%;
+	box-shadow: 1px 1px 5px 2px var(--black);
+	text-shadow: 3px 2px 2px var(--black);
 	background: linear-gradient(90deg, var(--accent-blue), var(--project-color-dark));
-	position: relative;
+}
+
+.cover-icon-container > h2 {
+	width: fit-content;
+	margin-right: 15px;
 }
 
 .fa-x {
@@ -664,7 +682,7 @@
 	display: none;
 }
 
-.cover-icon-container > i,
+.cover-icon-container-active > i,
 .cover-btn {
 	width: 50px;
 	height: 50px;
@@ -696,6 +714,21 @@
 	transform: scale(1.1);
 }
 
+.cover-icon-container-active {
+	width: 95%;
+	height: 60px;
+	display: flex;
+	flex-direction: row;
+	padding-left: 10px;
+	justify-content: start;
+	align-items: baseline;
+	padding-top: 10px;
+	border-radius: 15px;
+	background: linear-gradient(90deg, var(--accent-blue), var(--project-color-dark));
+	position: relative;
+	transition: all ease 0.4s;
+}
+
 .form-cover-header {
 	color: var(--project-color-light);
 	font-size: 2rem;
@@ -720,7 +753,7 @@
 .patient-form-container {
 	width: 440px;
 	height: 520px;
-	transition: height ease 0.2s;
+	transition: height ease 2s;
 	position: relative;
 }
 

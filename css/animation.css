@@ -134,3 +134,24 @@
 		content: 'Delayed.';
 	}
 }
+
+/* !!Responsive Override */
+
+@media (max-width: 320px) {
+	.ceo-container:hover .ceo-image-container {
+		align-items: center;
+	}
+
+	.ceo-container .ceo-social-container {
+		right: 12px;
+	}
+
+	.ceo-container:hover .ceo-social-container > i {
+		z-index: 2;
+		color: var(--accent-blue);
+	}
+
+	.exec-card:hover {
+		transform: scale(1);
+	}
+}

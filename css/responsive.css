@@ -29,6 +29,11 @@
 	.services-cards-wrapper {
 		gap: 30px;
 	}
+
+	.healthCare-animation-container {
+		flex-direction: column;
+		height: 150px;
+	}
 }
 
 /* ++Styles for the trash ass ipad */
@@ -70,6 +75,11 @@
 		text-align: center;
 	}
 
+	.search-container,
+	.search-toggles-container {
+		width: 460px;
+	}
+
 	.patient-care-header-container {
 		justify-content: center;
 	}
@@ -107,6 +117,11 @@
 	.service-card {
 		height: 320px;
 		width: 300px;
+	}
+
+	.ceo-social-container {
+		top: 50px;
+		right: 5px;
 	}
 
 	.ceo-dots:nth-child(1) {
@@ -182,11 +197,6 @@
 		text-align: justify;
 	}
 
-	.cover-icon-container > i {
-		width: 40px;
-		height: 40px;
-	}
-
 	.cover-icon-container > .patient-toggle {
 		width: 20px;
 		height: 20px;
@@ -202,6 +212,22 @@
 		width: 100px;
 		height: 35px;
 		border-radius: 10px;
+	}
+
+	.top-exec-container {
+		padding: 0;
+	}
+
+	.exec-card {
+		width: 310px;
+	}
+
+	.exec-card .profile-text-container > h4 {
+		font-size: 12px;
+	}
+
+	.exec-statement {
+		font-size: 16px;
 	}
 
 	.search-heading-text {
