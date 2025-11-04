@@ -1,5 +1,6 @@
 .ceo-container:hover {
 	background: var(--project-color-dark);
+	/* box-shadow: 2px 2px 8px 5px var(--project-color-dark); */
 }
 
 .ceo-container:hover .ceo-dots {
@@ -27,6 +28,7 @@
 .ceo-container:hover .ceo-figure,
 .ceo-container:hover .ceo-figcaption {
 	text-align: left;
+	color: var(--project-color-light);
 }
 
 .ceo-container:hover .ceo-message-header {

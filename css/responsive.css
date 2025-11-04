@@ -89,6 +89,16 @@
 	.patient-forms-wrapper-container {
 		gap: 60px;
 	}
+
+	.why-eterna-header-question {
+		font-size: 2rem;
+		text-align: center;
+	}
+
+	.why-question-2 {
+		height: fit-content;
+		outline: var(--olR);
+	}
 }
 
 @media (max-width: 320px) {
@@ -117,6 +127,10 @@
 	.service-card {
 		height: 320px;
 		width: 300px;
+	}
+
+	.ceo-container {
+		border-radius: 15px;
 	}
 
 	.ceo-social-container {
@@ -175,7 +189,7 @@
 	}
 
 	.ceo-statement {
-		font-size: 1.2rem;
+		font-size: 1rem;
 		width: 90%;
 		line-height: 1.8;
 	}
