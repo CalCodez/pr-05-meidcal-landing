@@ -83,52 +83,6 @@ const menuToggle = (toggler, menu, arr) => {
 
 menuToggle(menuToggler, mobileMenu, mobileLinks);
 
-//Services Card Curtain Vars and Function
-const curtainToggles = selectAll('.service-card-view-more-btn');
-const serviceCurtain = selectAll('.services-card-curtain');
-const activeServiceCurtain = 'services-card-curtain-active';
-const curtainHeaders = selectAll('.curtain-header');
-const curtainUl = selectAll('.curtain-ul');
-
-const [facilityToggle, caresToggle, specialtiesToggle] = curtainToggles;
-const [facilityCurtain, caresCurtain, specialtiesCurtain] = serviceCurtain;
-const [facilityHeader, caresHeader, specialtiesHeader] = curtainHeaders;
-const [facilityUl, caresUl, specialtiesUl] = curtainUl;
-
-const toggleServiceCurtain = (toggler, curtain, header, ul) => {
-	toggler.addEventListener(click, () => {
-		if (!curtain.classList.contains(activeServiceCurtain)) {
-			toggleClass(curtain, activeServiceCurtain);
-			setTimeout(() => {
-				toggleClass(header, flexActive);
-				toggleClass(ul, flexActive);
-			}, 200);
-		} else {
-			toggleClass(curtain, activeServiceCurtain);
-			toggleClass(header, flexActive);
-			toggleClass(ul, flexActive);
-		}
-	});
-
-	curtain.addEventListener(click, () => {
-		if (!curtain.classList.contains(activeServiceCurtain)) {
-			toggleClass(curtain, activeServiceCurtain);
-			setTimeout(() => {
-				toggleClass(header, flexActive);
-				toggleClass(ul, flexActive);
-			}, 200);
-		} else {
-			toggleClass(curtain, activeServiceCurtain);
-			toggleClass(header, flexActive);
-			toggleClass(ul, flexActive);
-		}
-	});
-};
-
-toggleServiceCurtain(facilityToggle, facilityCurtain, facilityHeader, facilityUl);
-toggleServiceCurtain(caresToggle, caresCurtain, caresHeader, caresUl);
-toggleServiceCurtain(specialtiesToggle, specialtiesCurtain, specialtiesHeader, specialtiesUl);
-
 //!!Patient Center Vars and Functions
 
 const portalForm = getById('portal-form');
@@ -181,8 +135,6 @@ const { portal, bill, schedule } = formsObj;
 
 const coverActive = 'form-cover-active';
 const iconContainerActive = 'cover-icon-container-active';
-
-console.log(coverIconContainers);
 
 const toggleForms = (obj) => {
 	for (let toggle of obj.toggles) {

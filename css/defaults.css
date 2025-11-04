@@ -31,7 +31,7 @@ html {
 	width: 100%;
 	background-color: var(--main-bg-color);
 	padding: 20px 0;
-	height: auto;
+	height: fit-content;
 }
 
 body {
@@ -41,7 +41,7 @@ body {
 	width: 100%;
 	max-width: 1559px;
 	min-width: 320px;
-	height: auto;
+	height: fit-content;
 	position: relative;
 }
 
@@ -197,4 +197,60 @@ section {
 	height: auto;
 	margin-bottom: 100px;
 	flex-wrap: wrap;
+}
+
+.body-banner-container {
+	height: 60px;
+	width: 100%;
+	justify-content: center;
+	margin-bottom: 50px;
+	position: sticky;
+	z-index: 3;
+	top: 0;
+	background: linear-gradient(90deg, rgb(35, 35, 255, 0.7), rgba(26, 45, 66, 0.7));
+	/* border-radius: 80px; */
+	box-shadow: 1px 3px 8px 1px var(--black);
+}
+
+.body-banner-text {
+	color: var(--project-color-light);
+	text-shadow: 1px 3px 3px var(--black);
+	place-content: center;
+	height: 50px;
+	padding-left: 10px;
+	font-size: 2.5rem;
+	width: 90%;
+	text-align: center;
+}
+
+.healthCare-animation-container {
+	height: 60px;
+	width: 100%;
+	justify-self: center;
+	position: relative;
+	align-items: center;
+	margin-bottom: 30px;
+	position: sticky;
+	top: 0;
+	top: 60px;
+}
+
+.body-banner-3 {
+	top: 120px;
+}
+
+.healthcare-header-text {
+	width: fit-content;
+	margin-right: 10px;
+}
+
+.healthcare-span {
+	width: 210px;
+	height: 40px;
+	color: var(--project-color-light);
+	font-size: 2rem;
+	align-content: center;
+	text-align: center;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px 2px var(--black);
 }
