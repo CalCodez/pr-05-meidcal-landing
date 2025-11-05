@@ -160,9 +160,9 @@
 	place-content: center;
 	color: var(--project-color-light);
 	place-items: center;
-	border: 3px outset var(--project-color-light);
+	border: 3px solid var(--project-color-light);
 	border-radius: 50%;
-	box-shadow: 2px 2px 20px 1px var(--black);
+	box-shadow: 2px 2px 5px 2px var(--black);
 }
 
 .why-card > h4 {
