@@ -26,6 +26,18 @@
 		height: 500px;
 	}
 
+	.hero-text {
+		font-size: 4rem;
+	}
+
+	.hero-slogan-text {
+		font-size: 1.3rem;
+	}
+
+	.hero-tagline {
+		font-size: 2.2rem;
+	}
+
 	.services-cards-wrapper {
 		gap: 30px;
 	}
@@ -70,6 +82,10 @@
 		justify-content: flex-start;
 	}
 
+	.body-banner-text {
+		font-size: 1.5rem;
+	}
+
 	.services-header-text {
 		font-size: 1.8rem;
 		text-align: center;
@@ -97,11 +113,14 @@
 
 	.why-question-2 {
 		height: fit-content;
-		outline: var(--olR);
 	}
 }
 
 @media (max-width: 320px) {
+	.body-banner-text {
+		font-size: 1.1rem;
+	}
+
 	.logo-text,
 	.hero-text {
 		font-size: 3rem;

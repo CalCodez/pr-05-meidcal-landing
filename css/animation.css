@@ -99,6 +99,18 @@
 	color: var(--accent-blue);
 }
 
+/* **Hero Animation */
+
+.all-day-span:after {
+	content: '';
+	animation: allDay 6s infinite;
+}
+
+.all-year-span:after {
+	content: '';
+	animation: allYear 6s infinite;
+}
+
 /* **HealthCare Animation */
 
 .healthcare-span:after {

@@ -36,7 +36,6 @@ html {
 
 body {
 	display: flex;
-	justify-content: flex-start;
 	flex-direction: column;
 	width: 100%;
 	max-width: 1559px;
@@ -69,8 +68,8 @@ body {
 
 .logo-text {
 	font-size: 5rem;
-	color: #1a2d42;
-	text-shadow: 1px 1px 8px var(--project-color-light);
+	color: var(--project-color-light);
+	text-shadow: 1px 3px 3px var(--black);
 	font-family: var(--project-font);
 }
 
