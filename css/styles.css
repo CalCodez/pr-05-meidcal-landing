@@ -140,7 +140,7 @@
 }
 
 .why-card {
-	width: 240px;
+	width: 310px;
 	height: 220px;
 	flex-direction: column;
 	outline: var(--olB);
@@ -149,18 +149,20 @@
 	box-shadow: 2px 2px 8px 2px var(--black);
 	justify-content: space-evenly;
 	background: linear-gradient(65deg, var(--project-color-dark), var(--accent-blue));
+	text-shadow: 1px 3px 3px var(--black);
 }
 
 .why-card > i {
-	width: 60px;
-	height: 60px;
+	width: 80px;
+	height: 80px;
 	display: flex;
-	font-size: 2rem;
+	font-size: 3rem;
 	place-content: center;
 	color: var(--project-color-light);
 	place-items: center;
 	border: 3px outset var(--project-color-light);
-	border-radius: 10px;
+	border-radius: 50%;
+	box-shadow: 2px 2px 20px 1px var(--black);
 }
 
 .why-card > h4 {

@@ -143,6 +143,11 @@
 		width: 100%;
 	}
 
+	.why-card {
+		width: 295px;
+		height: 220px;
+	}
+
 	.ceo-container {
 		border-radius: 15px;
 	}
