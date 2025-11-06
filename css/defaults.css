@@ -11,6 +11,8 @@
 	--project-color-dark: #1a2d42;
 	--project-color-light: #d4d8dd;
 	--project-font: 'Hello Bonia Serif', sans-serif;
+
+	--text-shadow: 1px 3px 3px #000000;
 }
 
 * {
@@ -198,6 +200,15 @@ section {
 	flex-wrap: wrap;
 }
 
+.eterna-container-header {
+	height: 30px;
+	font-size: 1rem;
+	letter-spacing: 2;
+	font-family: var(--project-font);
+	color: var(--project-color-dark);
+	align-content: center;
+}
+
 .body-banner-container {
 	height: 60px;
 	width: 100%;
@@ -228,7 +239,7 @@ section {
 	justify-self: center;
 	position: relative;
 	align-items: center;
-	margin-bottom: 30px;
+	margin-bottom: 60px;
 	position: sticky;
 	top: 0;
 	top: 60px;

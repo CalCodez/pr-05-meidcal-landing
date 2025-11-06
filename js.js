@@ -83,6 +83,167 @@ const menuToggle = (toggler, menu, arr) => {
 
 menuToggle(menuToggler, mobileMenu, mobileLinks);
 
+//++Chief Search Vars and Functions
+const chiefs = [
+	{
+		id: 'neurology',
+		name: 'Dr. Elijah Williams- MD/PhD',
+		title: 'Chief of Neurology',
+		src: './assets/people/chiefs/chief_of_neurology.png',
+		statement: 'Your health journey matters to us—every step, every moment, every day.',
+	},
+
+	{
+		id: 'oncology',
+		name: 'Dr. Parker Hayes- MD',
+		title: 'Chief of Oncology',
+		src: './assets/people/chiefs/chief_of_oncology.png',
+		statement: 'We treat every patient like family, with compassion and respect at every visit.',
+	},
+	{
+		id: 'dermatology',
+		name: 'Dr. Nia Carter- MD',
+		title: 'Chief of Dermatology',
+		src: './assets/people/chiefs/chief_of_dermatology.png',
+		statement: 'Dedicated to listening, understanding, and delivering the care you truly deserve.',
+	},
+	{
+		id: 'psychiatry',
+		name: 'Dr. Marco Bellini- MD',
+		title: 'Chief of Psychiatry',
+		src: './assets/people/chiefs/chief_of_psychiatry.png',
+		statement: 'Where medical expertise meets genuine human care—your wellness is our mission.',
+	},
+	{
+		id: 'orthopedics',
+		name: 'Dr. Owen Matthews- MD',
+		title: 'Chief of Orthopedics',
+		src: './assets/people/chiefs/chief_of_orthopedics.png',
+		statement: 'Your comfort, confidence, and care come first—always.',
+	},
+	{
+		id: 'cardiology',
+		name: 'Dr. Darius Johnson- MD',
+		title: 'Chief of Cardiology',
+		src: './assets/people/chiefs/chief_of_cardiology.jpg',
+		statement: 'Excellence in medicine begins with compassion and a patient-first mindset.',
+	},
+	{
+		id: 'surgery',
+		name: 'Dr. Skye Patel- MD/MBChB',
+		title: 'Chief of Surgery',
+		src: './assets/people/chiefs/chief_of_surgery.jpg',
+		statement: 'We’re here to heal, to guide, and to care beyond expectations.',
+	},
+	{
+		id: 'geriatrics',
+		name: 'Dr. Zoe Mitchell- MD/MPH',
+		title: 'Chief of Geriatrics',
+		src: './assets/people/chiefs/chief_of_geriatrics.jpg',
+		statement: 'Every patient’s story matters—we’re honored to be part of yours.',
+	},
+	{
+		id: 'pain management',
+		name: 'Dr. Linh Tran - MD',
+		title: 'Chief of Pain Management',
+		src: './assets/people/chiefs/chief_of_pain_management.jpg',
+		statement:
+			'Trusted care built on empathy, innovation, and unwavering commitment to your well-being.',
+	},
+	{
+		id: 'anesthesiology',
+		name: 'Dr. Kieth Johnson - MD/PhD',
+		title: 'Chief of Anesthesiology',
+		src: './assets/people/chiefs/chief_of_anesthesiology.jpg',
+		statement: 'Compassion drives our care—your trust inspires our excellence.',
+	},
+	{
+		id: 'emergency medicine',
+		name: 'Dr. Zane Moore - MD/PhD',
+		title: 'Chief of Emergency Medicine',
+		src: './assets/people/chiefs/chief_of_emergency_medicine.jpg',
+		statement: 'Our focus is simple: better health, better experiences, better lives.',
+	},
+	{
+		id: 'pediatrics',
+		name: 'Dr. Jada Davis - MD',
+		title: 'Chief of Pediatrics',
+		src: './assets/people/chiefs/chief_of_pediatrics.jpg',
+		statement: 'Together, we’ll create a healthier, happier future for you and your family.',
+	},
+	{
+		id: 'ob/gyn',
+		name: 'Dr. Deja Williamson - MD',
+		title: 'Chief of OB/GYN',
+		src: './assets/people/chiefs/chief_of_ob_gyn.jpg',
+		statement: 'Medicine with heart—personalized, compassionate, and centered around you.',
+	},
+	{
+		id: 'radiology',
+		name: 'Dr. Samar Veer - MD',
+		title: 'Chief of Radiology',
+		src: './assets/people/chiefs/chief_of_radiology.jpg',
+		statement: 'We listen first, care deeply, and act with purpose for your health.',
+	},
+	{
+		id: 'pathology',
+		name: 'Dr. Juan Rivera - MD/MPH',
+		title: 'Chief of Pathology',
+		src: './assets/people/chiefs/chief_of_pathology.jpg',
+		statement: 'Delivering expert care that feels personal, thoughtful, and reassuring.',
+	},
+	{
+		id: 'rehab services',
+		name: 'Dr. Amina Khalil - MD',
+		title: 'Chief of Rehab Services',
+		src: './assets/people/chiefs/chief_of_rehab_services.jpg',
+		statement: 'From diagnosis to recovery, we’re here for you—every step of the way.',
+	},
+	{
+		id: 'infectious_disease',
+		name: 'Dr. Greg Sanders - MD/PhD',
+		title: 'Chief of Infectious Disease',
+		src: './assets/people/chiefs/chief_of_infectious_disease.jpg',
+		statement: 'Because you deserve care that treats more than symptoms—it treats you.',
+	},
+	{
+		id: 'urology',
+		name: 'Dr. Malique Taylor - MD',
+		title: 'Chief of Urology',
+		src: './assets/people/chiefs/chief_of_urology.jpg',
+		statement: 'Our mission is to make every visit meaningful, comfortable, and effective.',
+	},
+	{
+		id: 'endocrinology',
+		name: 'Dr. A`nika Banks - MD/MBA',
+		title: 'Chief of Endocrinology',
+		src: './assets/people/chiefs/chief_of_endocrinology.jpg',
+		statement: '“We’re committed to providing the best care, with kindness leading the way.',
+	},
+];
+
+function updateChiefCards(arr = chiefs) {
+	const chiefSearch = getById('chief-search');
+	const chiefName = getById('chief-name');
+	const chiefTitle = getById('chief-title');
+	const chiefStatement = getById('chief-statement');
+	const chiefImg = getById('chief-image');
+	const departmentLabel = getById('department-label');
+
+	chiefSearch.addEventListener(click, () => {
+		for (let obj of arr) {
+			if (chiefSearch.value == obj.id) {
+				textContent(chiefName, obj.name);
+				textContent(chiefTitle, obj.title);
+				textContent(chiefStatement, obj.statement);
+				textContent(departmentLabel, obj.id);
+				chiefImg.src = obj.src;
+			}
+		}
+	});
+}
+updateChiefCards();
+
 //!!Patient Center Vars and Functions
 
 const portalForm = getById('portal-form');
