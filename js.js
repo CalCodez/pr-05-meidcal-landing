@@ -200,7 +200,7 @@ const chiefs = [
 		statement: 'From diagnosis to recovery, we’re here for you—every step of the way.',
 	},
 	{
-		id: 'infectious_disease',
+		id: 'infectious disease',
 		name: 'Dr. Greg Sanders - MD/PhD',
 		title: 'Chief of Infectious Disease',
 		src: './assets/people/chiefs/chief_of_infectious_disease.jpg',
@@ -218,29 +218,38 @@ const chiefs = [
 		name: 'Dr. A`nika Banks - MD/MBA',
 		title: 'Chief of Endocrinology',
 		src: './assets/people/chiefs/chief_of_endocrinology.jpg',
-		statement: '“We’re committed to providing the best care, with kindness leading the way.',
+		statement: 'We’re committed to providing the best care, with kindness leading the way.',
+	},
+	{
+		id: 'pulmonology',
+		name: 'Dr. Maya Brooks- MD',
+		title: 'Chief of Pulmonology',
+		src: './assets/people/chiefs/chief_of_pharmacy.jpg',
+		statement: 'Your care is our calling—where compassion and expertise come together for you.',
 	},
 ];
 
 function updateChiefCards(arr = chiefs) {
-	const chiefSearch = getById('chief-search');
+	const chiefSelectSpans = selectAll('.chief-select-span');
 	const chiefName = getById('chief-name');
 	const chiefTitle = getById('chief-title');
 	const chiefStatement = getById('chief-statement');
 	const chiefImg = getById('chief-image');
 	const departmentLabel = getById('department-label');
 
-	chiefSearch.addEventListener(click, () => {
-		for (let obj of arr) {
-			if (chiefSearch.value == obj.id) {
-				textContent(chiefName, obj.name);
-				textContent(chiefTitle, obj.title);
-				textContent(chiefStatement, obj.statement);
-				textContent(departmentLabel, obj.id);
-				chiefImg.src = obj.src;
+	for (let toggle of chiefSelectSpans) {
+		toggle.addEventListener(click, () => {
+			for (let obj of arr) {
+				if (toggle.id == obj.id) {
+					textContent(chiefName, obj.name);
+					textContent(chiefTitle, obj.title);
+					textContent(chiefStatement, obj.statement);
+					textContent(departmentLabel, obj.id);
+					chiefImg.src = obj.src;
+				}
 			}
-		}
-	});
+		});
+	}
 }
 updateChiefCards();
 

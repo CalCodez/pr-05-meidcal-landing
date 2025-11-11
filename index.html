@@ -36,16 +36,18 @@
 				<p class="logo-text">ECM<i class="fa-solid fa-staff-snake"></i></p>
 			</div>
 			<nav class="nav-bar container">
-				<a class="main-nav-links" href="#"><i class="fa-solid fa-house-medical"></i>Home</a>
-				<a class="main-nav-links" href="#"><i class="fa-solid fa-circle-info"></i>About</a>
-				<a class="main-nav-links" href="#"><i class="fa-solid fa-sitemap"></i>Departments</a>
-				<a class="main-nav-links" href="#"> <i class="fa-solid fa-stethoscope"></i>Doctors</a>
-				<a class="main-nav-links" href="#"> <i class="fa-solid fa-suitcase-medical"></i>Services</a>
+				<a class="main-nav-links" href="#">Home</a>
+				<a class="main-nav-links" href="#about">About</a>
+				<a class="main-nav-links" href="#doctors"> Doctors</a>
+				<a class="main-nav-links" href="#patient-center">Patient Center</a>
+				<a class="main-nav-links" href="#"> Services</a>
 			</nav>
 		</div>
 
-		<section id="hero-section" class="hero-section">
-			<div class="hero-text-container">
+		<section id="hero-section" class="hero-section container">
+			<img src="./assets/backgrounds/faclity.png" alt="decent cares facility" />
+
+			<div class="hero-text-container container">
 				<h1 class="hero-text">Eterna Care Medical</h1>
 				<hr class="hero-section-hr" />
 
@@ -57,12 +59,7 @@
 						you!</em
 					>
 				</p>
-			</div>
 
-			<div class="hero-image-container container">
-				<div class="facility-img-container container">
-					<img src="./assets/backgrounds/faclity.png" alt="decent cares facility" />
-				</div>
 				<div class="facility-social-container container">
 					<i class="fa-brands fa-facebook"></i>
 					<i class="fa-brands fa-instagram"></i>
@@ -75,7 +72,7 @@
 			</div>
 		</section>
 
-		<div class="container body-banner-container">
+		<div id="about" class="container body-banner-container">
 			<h2 class="body-banner-text">
 				<em>Innovative Care Meets Comfort...</em>
 			</h2>
@@ -85,7 +82,7 @@
 
 		<!-- ++Why Choose Us -->
 
-		<section id="services-section" class="services-section">
+		<section id="about" class="services-section">
 			<div class="why-choose-us-container container">
 				<h5 class="eterna-container-header">Eterna Care Medical</h5>
 				<h3 class="why-eterna-header-question">Why Choose Eterna?</h3>
@@ -203,7 +200,7 @@
 			</div>
 		</section>
 
-		<div class="container body-banner-container healthCare-animation-container">
+		<div id="doctors" class="container body-banner-container healthCare-animation-container">
 			<h2 class="body-banner-text healthcare-header-text">
 				<em class="healthcare-em">Because Healthcare Should Never Be... </em>
 			</h2>
@@ -213,8 +210,8 @@
 		<!-- ++Top Exec Container -->
 		<section class="top-exec-section container">
 			<h5 class="eterna-container-header">Eterna Care Medical</h5>
+			<h2 class="exec-header">Words From Our Staff of Chief</h2>
 
-			<h2 class="exec-header">Words From Are Heads Of Staff</h2>
 			<div class="top-exec-container container">
 				<div class="exec-card container">
 					<div class="exec-statement-container container">
@@ -325,35 +322,22 @@
 					</div>
 				</div>
 			</div>
+
+			<h2 class="exec-header">See What All Our Chefs Are Saying</h2>
+
 			<!-- ++Chief Select Container -->
 			<div class="chief-select-container container">
 				<div class="chief-search-container container">
-					<select class="inputs" name="department" id="chief-search">
-						<option value="neurology">Neurology</option>
-						<option value="oncology">Oncology</option>
-						<option value="dermatology">Dermatology</option>
-						<option value="psychiatry">Psychiatry</option>
-						<option value="orthopedics">Orthopedics</option>
-						<option value="cardiology">Cardiology</option>
-						<option value="surgery">Surgery</option>
-						<option value="geriatrics">Geriatrics</option>
-						<option value="pain management">Pain Management</option>
-						<option value="anesthesiology">Anesthesiology</option>
-						<option value="emergency medicine">Emergency Medicine</option>
-						<option value="pediatrics">Pediatrics</option>
-						<option value="ob/gyn">OB/GYN</option>
-						<option value="radiology">Radiology</option>
-						<option value="pathology">Pathology</option>
-						<option value="rehab services">Rehab Services</option>
-						<option value="infectious disease">Infectious Disease</option>
-						<option value="urology">Urology</option>
-						<option value="endocrinology">Endocrinology</option>
-					</select>
-
-					<p class="chief-search-text">
-						See what are head of departments are saying about health care here at Eterna Care
-						Medical
-					</p>
+					<span class="chief-select-span" id="neurology">Neurology</span>
+					<span class="chief-select-span" id="oncology">Oncology</span>
+					<span class="chief-select-span" id="dermatology">Dermatology</span>
+					<span class="chief-select-span" id="psychiatry">Psychiatry</span>
+					<span class="chief-select-span" id="orthopedics">Orthopedics</span>
+					<span class="chief-select-span" id="cardiology">Cardiology</span>
+					<span class="chief-select-span" id="surgery">Surgery</span>
+					<span class="chief-select-span" id="geriatrics">Geriatrics</span>
+					<span class="chief-select-span" id="pain management">Pain Management</span>
+					<span class="chief-select-span" id="anesthesiology">Anesthesiology</span>
 				</div>
 
 				<!-- **CHIEF CARDS CONTAINER -->
@@ -387,10 +371,23 @@
 
 					<h2 id="department-label" class="department-label">NEUROLOGY</h2>
 				</div>
+
+				<div class="chief-search-container container">
+					<span class="chief-select-span" id="emergency medicine">Emergency Medicine</span>
+					<span class="chief-select-span" id="pediatrics">Pediatrics</span>
+					<span class="chief-select-span" id="ob/gyn">OB/GYN</span>
+					<span class="chief-select-span" id="radiology">Radiology</span>
+					<span class="chief-select-span" id="pathology">Pathology</span>
+					<span class="chief-select-span" id="rehab services">Rehab Services</span>
+					<span class="chief-select-span" id="infectious disease">Infectious Disease</span>
+					<span class="chief-select-span" id="urology">Urology</span>
+					<span class="chief-select-span" id="endocrinology">Endocrinology</span>
+					<span class="chief-select-span" id="pulmonology">Pulmonology</span>
+				</div>
 			</div>
 		</section>
 
-		<div class="container body-banner-container body-banner-3">
+		<div id="patient-center" class="container body-banner-container body-banner-3">
 			<h2 class="body-banner-text">
 				<em>Or More Importantly An Inconvenience...</em>
 			</h2>

@@ -1,4 +1,14 @@
 @media (max-width: 1024px) {
+	.body-banner-container {
+		position: relative;
+		background: linear-gradient(90deg, var(-accent-blue), var(--project-color-dark));
+	}
+
+	.healthCare-animation-container {
+		flex-direction: column;
+		height: 150px;
+	}
+
 	.nav-bar {
 		display: none;
 	}
@@ -6,24 +16,6 @@
 	#menu-toggler,
 	#patient-mobile-menu-toggle {
 		display: flex;
-	}
-
-	.patient-center-section .mobile-menu-active {
-		height: 220px;
-		width: 240px;
-	}
-
-	.patient-toggle-container {
-		display: none;
-	}
-
-	.hero-section {
-		justify-content: center;
-	}
-	.hero-text-container,
-	.hero-image-container {
-		width: 500px;
-		height: 500px;
 	}
 
 	.hero-text {
@@ -42,9 +34,9 @@
 		gap: 30px;
 	}
 
-	.healthCare-animation-container {
+	.chief-select-container {
 		flex-direction: column;
-		height: 150px;
+		row-gap: 20px;
 	}
 }
 
@@ -71,10 +63,6 @@
 
 	.mobile-menu-active {
 		top: 35px;
-	}
-
-	.patient-center-section .mobile-menu-active {
-		top: -2px;
 	}
 
 	.logo-nav-container,
@@ -123,11 +111,7 @@
 
 	.logo-text,
 	.hero-text {
-		font-size: 3rem;
-	}
-
-	.hero-text-container {
-		height: 450px;
+		font-size: 2.5rem;
 	}
 
 	.facility-img-container {
@@ -249,6 +233,10 @@
 
 	.top-exec-container {
 		padding: 0;
+	}
+
+	.chief-card-container {
+		width: fit-content;
 	}
 
 	.exec-card {
