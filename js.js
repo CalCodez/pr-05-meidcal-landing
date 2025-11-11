@@ -229,6 +229,46 @@ const chiefs = [
 	},
 ];
 
+function toggleChiefCurtin() {
+	const chiefSelectCurtin = getById('chief-select-curtin');
+	const chiefSelectHeader = getById('chief-select-header');
+	const chiefSelectText = getById('chief-select-text');
+	const chiefCurtinToggle = getById('chief-curtin-toggle');
+	const chiefCurtinUp = 'chief-select-curtin-up';
+
+	chiefCurtinToggle.addEventListener(click, () => {
+		if (!chiefSelectCurtin.classList.contains(chiefCurtinUp)) {
+			toggleClass(chiefSelectCurtin, chiefCurtinUp);
+			toggleClass(chiefSelectHeader, flexInactive);
+			toggleClass(chiefSelectText, flexInactive);
+			toggleClass(chiefCurtinToggle, flexInactive);
+		} else {
+			toggleClass(chiefSelectCurtin, chiefCurtinUp);
+			setTimeout(() => {
+				toggleClass(chiefSelectHeader, flexInactive);
+				toggleClass(chiefSelectText, flexInactive);
+				toggleClass(chiefCurtinToggle, flexInactive);
+				console.log('Time out works');
+			}, 600);
+		}
+	});
+
+	window.addEventListener(keyup, (e) => {
+		if (e.key === 'Escape' && chiefSelectCurtin.classList.contains(chiefCurtinUp)) {
+			toggleClass(chiefSelectCurtin, chiefCurtinUp);
+
+			setTimeout(() => {
+				toggleClass(chiefSelectHeader, flexInactive);
+				toggleClass(chiefSelectText, flexInactive);
+				toggleClass(chiefCurtinToggle, flexInactive);
+				console.log('Time out works');
+			}, 500);
+		}
+	});
+}
+
+toggleChiefCurtin();
+
 function updateChiefCards(arr = chiefs) {
 	const chiefSelectSpans = selectAll('.chief-select-span');
 	const chiefName = getById('chief-name');

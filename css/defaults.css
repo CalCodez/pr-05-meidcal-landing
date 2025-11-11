@@ -9,7 +9,7 @@
 	--main-bg-color: #3674b5;
 	--accent-blue: #2323ff;
 	--project-color-dark: #1a2d42;
-	--project-color-light: #c6c9cc;
+	--project-color-light: #b4bdc5;
 	--project-font: 'Hello Bonia Serif', sans-serif;
 
 	--text-shadow: 1px 3px 3px #000000;
@@ -170,16 +170,12 @@ body {
 	font-size: 15px;
 	font-weight: 600;
 	cursor: pointer;
-	background: linear-gradient(
-		15deg,
-		rgba(212, 216, 221, 0.8),
-		var(--accent-blue),
-		var(--accent-blue),
-		var(--accent-blue),
-		var(--project-color-light),
-		var(--project-color-light)
-	);
+	background: radial-gradient(var(--accent-blue), var(--project-color-dark));
 	margin-top: 10px;
+	box-sizing: border-box;
+	place-content: center;
+	text-align: center;
+	text-shadow: var(--text-shadow);
 }
 .main-nav-links:hover,
 .mobile-nav-links:hover,
@@ -214,7 +210,6 @@ section {
 	width: 100%;
 	justify-content: center;
 	margin-bottom: 50px;
-	position: sticky;
 	z-index: 3;
 	top: 0;
 	background: linear-gradient(90deg, rgb(35, 35, 255, 0.7), rgba(26, 45, 66, 0.7));
@@ -240,7 +235,6 @@ section {
 	position: relative;
 	align-items: center;
 	margin-bottom: 60px;
-	position: sticky;
 	top: 0;
 	top: 60px;
 }
