@@ -20,8 +20,8 @@ const servicesSection = getById('services-section');
 const patientCenterSection = getById('patient-center-section');
 const meetChiefSection = getById('meet-chiefs-section');
 
-// hideSection(heroSection);
-// hideSection(servicesSection);
+hideSection(heroSection);
+hideSection(servicesSection);
 // hideSection(patientCenterSection);
 // hideSection(meetChiefSection);
 //NOTE: HTML SECTIONs ^
@@ -269,15 +269,16 @@ function toggleChiefCurtin() {
 
 toggleChiefCurtin();
 
-function updateChiefCards(arr = chiefs) {
-	const chiefSelectSpans = selectAll('.chief-select-span');
+const chiefSelectSpans = selectAll('.chief-select-span');
+
+function updateChiefCards(arr, arr2) {
 	const chiefName = getById('chief-name');
 	const chiefTitle = getById('chief-title');
 	const chiefStatement = getById('chief-statement');
 	const chiefImg = getById('chief-image');
 	const departmentLabel = getById('department-label');
 
-	for (let toggle of chiefSelectSpans) {
+	for (let toggle of arr2) {
 		toggle.addEventListener(click, () => {
 			for (let obj of arr) {
 				if (toggle.id == obj.id) {
@@ -291,7 +292,69 @@ function updateChiefCards(arr = chiefs) {
 		});
 	}
 }
-updateChiefCards();
+updateChiefCards(chiefs, chiefSelectSpans);
+
+//!!Chief Select input vars and func
+
+// const assignID = (arr1, arr2) => {
+// 	arr1[0].value = arr2[0].id;
+// 	arr1[1].value = arr2[1].id;
+// 	arr1[2].value = arr2[2].id;
+// 	arr1[3].value = arr2[3].id;
+// 	arr1[4].value = arr2[4].id;
+// 	arr1[5].value = arr2[5].id;
+// 	arr1[6].value = arr2[6].id;
+// 	arr1[7].value = arr2[7].id;
+// 	arr1[8].value = arr2[8].id;
+// 	arr1[9].value = arr2[9].id;
+// 	arr1[10].value = arr2[10].id;
+// 	arr1[11].value = arr2[11].id;
+// 	arr1[12].value = arr2[12].id;
+// 	arr1[13].value = arr2[13].id;
+// 	arr1[14].value = arr2[14].id;
+// 	arr1[15].value = arr2[15].id;
+// 	arr1[16].value = arr2[16].id;
+// 	arr1[17].value = arr2[17].id;
+// 	arr1[18].value = arr2[18].id;
+// 	arr1[19].value = arr2[19].id;
+
+// 	arr1[0] = arr2[0].id;
+// 	arr1[1] = arr2[1].id;
+// 	arr1[2] = arr2[2].id;
+// 	arr1[3] = arr2[3].id;
+// 	arr1[4] = arr2[4].id;
+// 	arr1[5] = arr2[5].id;
+// 	arr1[6] = arr2[6].id;
+// 	arr1[7] = arr2[7].id;
+// 	arr1[8] = arr2[8].id;
+// 	arr1[9] = arr2[9].id;
+// 	arr1[10] = arr2[10].id;
+// 	arr1[11] = arr2[11].id;
+// 	arr1[12] = arr2[12].id;
+// 	arr1[13] = arr2[13].id;
+// 	arr1[14] = arr2[14].id;
+// 	arr1[15] = arr2[15].id;
+// 	arr1[16] = arr2[16].id;
+// 	arr1[17] = arr2[17].id;
+// 	arr1[18] = arr2[18].id;
+// 	arr1[19] = arr2[19].id;
+// };
+
+const chiefInput = getById('chief-select');
+
+const chiefsId = chiefs
+	.map((id) => {
+		return id.id;
+	})
+	.forEach((op) => {
+		const options = createElement('option');
+		options.id = op;
+		textContent(options, op);
+		appendChild(chiefInput, options);
+		const test = Array.from(options);
+		test.push(options);
+		console.log(test);
+	});
 
 //!!Patient Center Vars and Functions
 

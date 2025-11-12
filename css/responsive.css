@@ -35,8 +35,11 @@
 	}
 
 	.chief-select-container {
-		flex-direction: column;
+		/* flex-direction: column; */
 		row-gap: 20px;
+	}
+	.chief-search-container {
+		display: none;
 	}
 }
 
@@ -51,6 +54,14 @@
 
 	.patient-forms-wrapper-container {
 		justify-content: center;
+	}
+
+	.chief-select-container {
+		justify-content: center;
+	}
+
+	.chief-search-container {
+		display: none;
 	}
 }
 
@@ -69,7 +80,9 @@
 	.logo-container {
 		justify-content: flex-start;
 	}
-
+	.chief-select-container {
+		justify-content: center;
+	}
 	.body-banner-text {
 		font-size: 1.5rem;
 	}

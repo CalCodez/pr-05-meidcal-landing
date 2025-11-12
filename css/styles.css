@@ -417,6 +417,7 @@
 	row-gap: 18px;
 	position: relative;
 	overflow: hidden;
+	outline: var(--ol);
 }
 
 .exec-statement-container {
@@ -434,6 +435,10 @@
 	left: 0;
 	color: var(--project-color-dark);
 	z-index: -1;
+}
+
+* {
+	outline: var(--olR);
 }
 
 .exec-statement {
@@ -502,6 +507,7 @@
 	column-gap: 120px;
 	position: relative;
 	overflow: hidden;
+	outline: var(--olR);
 }
 
 .chief-select-curtin {
@@ -512,7 +518,11 @@
 	background-color: var(--main-bg-color);
 	flex-direction: column;
 	row-gap: 20px;
-	transition: height ease 0.5s;
+	transition: all ease 0.5s;
+	top: 0;
+	border: 3px solid var(--project-color-dark);
+	border-radius: 8px;
+	display: none;
 }
 
 .chief-select-curtin-up {
@@ -526,10 +536,11 @@
 
 .chief-search-container {
 	width: 310px;
-	height: 380px;
+	height: 500px;
 	row-gap: 30px;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	padding: 5px 0;
 }
 
 .chief-select-span {
@@ -555,16 +566,22 @@
 }
 
 .chief-card-container {
-	height: 320px;
+	height: 335px;
 	width: 440px;
 	flex-direction: column;
 	justify-content: space-evenly;
+	outline: var(--olY);
 }
 
 .department-label {
 	color: var(--project-color-light);
 	text-shadow: var(--text-shadow);
 	text-transform: uppercase;
+}
+
+.chief-search-input {
+	width: 300px;
+	height: 10px;
 }
 
 .chief-search-text {
