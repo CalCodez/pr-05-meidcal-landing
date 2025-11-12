@@ -437,10 +437,6 @@
 	z-index: -1;
 }
 
-* {
-	outline: var(--olR);
-}
-
 .exec-statement {
 	font-size: 18px;
 	color: var(--project-color-light);
@@ -570,7 +566,6 @@
 	width: 440px;
 	flex-direction: column;
 	justify-content: space-evenly;
-	outline: var(--olY);
 }
 
 .department-label {
