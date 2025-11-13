@@ -20,8 +20,8 @@ const servicesSection = getById('services-section');
 const patientCenterSection = getById('patient-center-section');
 const meetChiefSection = getById('meet-chiefs-section');
 
-hideSection(heroSection);
-hideSection(servicesSection);
+// hideSection(heroSection);
+// hideSection(servicesSection);
 // hideSection(patientCenterSection);
 // hideSection(meetChiefSection);
 //NOTE: HTML SECTIONs ^
@@ -268,49 +268,73 @@ function toggleChiefCurtin() {
 }
 
 toggleChiefCurtin();
-
+//!!Chief Cards Update vars and func()
 const chiefSelectSpans = selectAll('.chief-select-span');
+const chiefSelectInput = getById('chief-select');
 
-function updateChiefCards(arr, arr2) {
+//Empty Array to catch the option once they are created and pushed.
+const optionsArr = [];
+
+//creating new array for all chiefs  arr[obj{id:}]ids
+chiefs
+	.map((id) => {
+		//extracting all ids
+		return id.id;
+	})
+	.forEach((op) => {
+		//creating options element for each ID
+		const options = createElement('option');
+		//setting ID for each ID
+		options.id = op;
+		//setting text content to display the options names for each ID
+		textContent(options, op);
+		//appending our newly created and options to the select input
+		appendChild(chiefSelectInput, options);
+		//pushing all the options to the optionsArr
+		optionsArr.push(options);
+	});
+
+//New set array to remove all the duplicates in the optionsArr for the update func(arg)
+const options = new Set(optionsArr);
+
+//Function for the click -> span and change -> select(options)
+function updateChiefCards(arr, arr2, arr3) {
 	const chiefName = getById('chief-name');
 	const chiefTitle = getById('chief-title');
 	const chiefStatement = getById('chief-statement');
 	const chiefImg = getById('chief-image');
 	const departmentLabel = getById('department-label');
 
-	for (let toggle of arr2) {
-		toggle.addEventListener(click, () => {
-			for (let obj of arr) {
+	for (let obj of arr) {
+		for (let toggle of arr2) {
+			toggle.addEventListener(click, () => {
 				if (toggle.id == obj.id) {
 					textContent(chiefName, obj.name);
 					textContent(chiefTitle, obj.title);
 					textContent(chiefStatement, obj.statement);
 					textContent(departmentLabel, obj.id);
 					chiefImg.src = obj.src;
+					console.log('Card Updated!');
 				}
-			}
-		});
+			});
+		}
+
+		for (let select of arr3) {
+			chiefSelectInput.addEventListener('change', () => {
+				if (chiefSelectInput.value == select.id && select.id == obj.id) {
+					textContent(chiefName, obj.name);
+					textContent(chiefTitle, obj.title);
+					textContent(chiefStatement, obj.statement);
+					textContent(departmentLabel, obj.id);
+					chiefImg.src = obj.src;
+					console.log('Card Updated!');
+				}
+			});
+		}
 	}
 }
-updateChiefCards(chiefs, chiefSelectSpans);
 
-//!!Chief Select input vars and func
-
-const chiefInput = getById('chief-select');
-
-const chiefsId = chiefs
-	.map((id) => {
-		return id.id;
-	})
-	.forEach((op) => {
-		const options = createElement('option');
-		options.id = op;
-		textContent(options, op);
-		appendChild(chiefInput, options);
-		const test = Array.from(options);
-		test.push(options);
-		console.log(test);
-	});
+updateChiefCards(chiefs, chiefSelectSpans, options);
 
 //!!Patient Center Vars and Functions
 

@@ -38,6 +38,10 @@
 		/* flex-direction: column; */
 		row-gap: 20px;
 	}
+
+	.chief-search-input {
+		display: flex;
+	}
 	.chief-search-container {
 		display: none;
 	}

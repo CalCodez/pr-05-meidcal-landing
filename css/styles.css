@@ -494,6 +494,7 @@
 /* ++Chief Select Container */
 .top-exec-section {
 	flex-direction: column;
+	margin-top: 25px;
 }
 
 .chief-select-container {
@@ -503,7 +504,7 @@
 	column-gap: 120px;
 	position: relative;
 	overflow: hidden;
-	outline: var(--olR);
+	margin-top: 25px;
 }
 
 .chief-select-curtin {
@@ -577,6 +578,7 @@
 .chief-search-input {
 	width: 300px;
 	height: 10px;
+	display: none;
 }
 
 .chief-search-text {
