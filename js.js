@@ -19,11 +19,13 @@ const heroSection = getById('hero-section');
 const servicesSection = getById('services-section');
 const patientCenterSection = getById('patient-center-section');
 const meetChiefSection = getById('meet-chiefs-section');
+const topExecContainer = getById('top-exec-section');
 
-// hideSection(heroSection);
-// hideSection(servicesSection);
-// hideSection(patientCenterSection);
+hideSection(heroSection);
+hideSection(servicesSection);
+hideSection(patientCenterSection);
 // hideSection(meetChiefSection);
+hideSection(topExecContainer);
 //NOTE: HTML SECTIONs ^
 
 //Global Project Vars
@@ -421,3 +423,58 @@ const toggleForms = (obj) => {
 toggleForms(portal);
 toggleForms(bill);
 toggleForms(schedule);
+
+//!!Patient Review Vars and Func
+
+const reviews = [
+	{
+		img: './assets/people/reviewers/emily_carson.jpg',
+		title: 'Compassion-Focused',
+		reviewerName: 'Emily Carson',
+		postTime: '6years ago',
+		review: `Eterna Care Medical truly sets the standard for compassionate care. Every staff member I met—rom the front desk ti the physicians—treated me with kindness and respect. I felt heard, supported, and genuinely cared for throughout my visit.`,
+	},
+	{
+		img: './assets/people/reviewers/mariana_lopez.jpg',
+		title: 'Efficiency & Professionalism',
+		reviewerName: 'Mariana Lopez',
+		postTime: '18months ago',
+		review: `I was impress by the efficiency at Eterna Care Medical. My appointment started on time, the team was organized, and the doctor explained everything clearly. It's refreshing to visit a medical center that values both professionalism and patient convenience.`,
+	},
+	{
+		img: './assets/people/reviewers/sofia_bennet.jpg',
+
+		title: 'Family Friendly',
+		reviewerName: 'Sofia Bennet',
+		postTime: '5months ago',
+		review: `MY entire family receives care at Eterna Care Medical and the experience has always been outstanding. The pediatric team is gentle and patient, and the adult specialist are equally attentive. It's comforting to know all of our medical needs can be handled in one place.`,
+	},
+	{
+		img: '/assets/people/reviewers/daniel_whitmore.jpg',
+		title: 'Advanced Technology',
+		reviewerName: 'Daniel Whitmore',
+		postTime: '48hours',
+		review: `Eterna Care Medial combines advanced technology with exceptional medical expertise. The diagnostic process was smooth and quick, and I appreciated how the clinicians used modern tools to explain my results. It gave me complete confidence in my care.`,
+	},
+	{
+		img: './assets/people/reviewers/ayesha_rahim.jpg',
+		title: 'Personalized Treatment ',
+		reviewerName: 'Ayesha Rahim',
+		postTime: '12hours ago',
+		review: `What stands out most about Eterna Care Medical is their commitment to personalized treatment. My provider took the time to understand my health goals and walked me through a customized care pla. I left feeling empowered abd reassured.`,
+	},
+	{
+		img: './assets/people/reviewers/marcus_hale.jpg',
+		title: 'Warm Atmosphere',
+		reviewerName: 'Marcus Hale',
+		postTime: '1hour ago',
+		review: `From the moment I walked in, Eterna Care Medical made me feel welcome. The facility is clean, modern, and calming. The staff creates such a warm atmosphere that even a routine checkup feels comfortable and stress-free. Highly recommended!`,
+	},
+];
+
+const patientReviewCardContainer = getById('patient-review-card-container');
+const patientReviewCard = 'patient-review-card container';
+const patientCardHeader = 'patient-card-header-container container';
+const patientImgContainer = 'patient-img-container';
+const patientInfoWrapper = 'patient-info-wrapper container';
+const reviewStarContainer = 'review-star-container container';

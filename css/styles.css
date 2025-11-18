@@ -974,6 +974,125 @@ option {
 	font-size: 1.1rem;
 }
 
+/* !!Patient Review Section */
+
+.patient-review-section {
+	height: 600px;
+	position: relative;
+	outline: var(--olR);
+	background: linear-gradient(
+		15deg,
+		var(--accent-blue),
+		rgba(35, 35, 255, 0.2),
+		var(--accent-blue)
+	);
+}
+
+.patient-review-section > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	z-index: -1;
+}
+.patient-review-card-container {
+	height: auto;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.patient-review-card {
+	height: 250px;
+	width: 380px;
+	border: 2px outset var(--accent-blue);
+	background-color: var(--main-bg-color);
+	flex-direction: column;
+	justify-content: space-evenly;
+	padding-top: 2px;
+	border-radius: 8px;
+	box-shadow: 2px 2px 2px 2px var(--black);
+}
+
+.patient-card-header-container {
+	display: flex;
+	width: 100%;
+	height: 90px;
+	padding-left: 8px;
+	column-gap: 8px;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.patient-img-container {
+	height: 85px;
+	width: 85px;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 1px 1px 5px 2px var(--black);
+}
+
+.patient-img-container > img {
+	height: 100%;
+	width: 100%;
+	object-fit: fill;
+}
+
+.patient-info-wrapper {
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+	color: var(--project-color-light);
+	row-gap: 3px;
+	justify-content: center;
+	text-shadow: var(--text-shadow);
+}
+
+.post-time-text {
+	color: var(--black);
+	text-shadow: none;
+}
+
+.review-logo {
+	font-size: 1.3rem;
+	width: 40px;
+	height: 40px;
+	border: 2px solid;
+	text-align: center;
+	align-content: center;
+	border-top-color: red;
+	border-left-color: blue;
+	border-bottom-color: yellow;
+	border-right-color: green;
+	border-radius: 50%;
+	color: var(--accent-blue);
+	text-shadow: var(--text-shadow);
+	background-color: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	right: 10px;
+	top: 3px;
+}
+
+.review-star-container {
+	width: 100%;
+	height: 30px;
+	justify-content: start;
+	padding-left: 2px;
+	color: #ffae00;
+	/* text-shadow: var(--text-shadow); */
+
+	column-gap: 5px;
+}
+
+/* .review-star-container > .fa-star {
+} */
+
+.patient-review {
+	color: var(--project-color-light);
+	text-shadow: var(--text-shadow);
+	font-size: 1rem;
+	line-height: 1.4;
+}
+
 .flex-active {
 	display: flex;
 }
