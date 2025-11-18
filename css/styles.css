@@ -417,7 +417,6 @@
 	row-gap: 18px;
 	position: relative;
 	overflow: hidden;
-	outline: var(--ol);
 }
 
 .exec-statement-container {
@@ -775,7 +774,6 @@
 	display: flex;
 	width: 95%;
 	border-radius: 15px;
-	/* background: linear-gradient(var(--accent-blue), var(--project-color-dark)); */
 	transition: all ease 0.2s;
 }
 
@@ -976,44 +974,59 @@ option {
 
 /* !!Patient Review Section */
 
-.patient-review-section {
-	height: 600px;
+.review-section {
+	height: auto;
 	position: relative;
-	outline: var(--olR);
 	background: linear-gradient(
 		15deg,
 		var(--accent-blue),
-		rgba(35, 35, 255, 0.2),
+		rgba(35, 35, 255, 0.3),
 		var(--accent-blue)
 	);
 }
 
-.patient-review-section > img {
+.review-section > img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	position: absolute;
 	z-index: -1;
 }
-.patient-review-card-container {
+
+.review-header-container {
+	height: auto;
+
+	width: 100%;
+	color: var(--project-color-light);
+}
+
+.review-header-container > p {
+	font-size: 1.4rem;
+	margin: 10px;
+	color: var(--black);
+	/* text-shadow: var(--text-shadow); */
+}
+
+.review-cards-container {
 	height: auto;
 	flex-wrap: wrap;
 	width: 100%;
+	justify-content: space-around;
+	gap: 20px;
 }
 
-.patient-review-card {
-	height: 250px;
-	width: 380px;
-	border: 2px outset var(--accent-blue);
-	background-color: var(--main-bg-color);
+.review-card {
+	height: 280px;
+	width: 400px;
+	background-color: var(--project-color-light);
 	flex-direction: column;
 	justify-content: space-evenly;
 	padding-top: 2px;
-	border-radius: 8px;
+	border-radius: 5px;
 	box-shadow: 2px 2px 2px 2px var(--black);
 }
 
-.patient-card-header-container {
+.review-card-header-container {
 	display: flex;
 	width: 100%;
 	height: 90px;
@@ -1023,28 +1036,33 @@ option {
 	box-sizing: border-box;
 }
 
-.patient-img-container {
-	height: 85px;
-	width: 85px;
+.review-card-img-container {
+	height: 100px;
+	width: 100px;
 	border-radius: 50%;
 	overflow: hidden;
 	box-shadow: 1px 1px 5px 2px var(--black);
 }
 
-.patient-img-container > img {
+.review-card-img-container > img {
 	height: 100%;
 	width: 100%;
-	object-fit: fill;
+	object-fit: cover;
 }
 
-.patient-info-wrapper {
+.reviewer-info-container {
 	display: flex;
 	flex-direction: column;
 	width: fit-content;
-	color: var(--project-color-light);
+	color: var(--project-color-dark);
 	row-gap: 3px;
 	justify-content: center;
-	text-shadow: var(--text-shadow);
+	margin-left: 10px;
+}
+
+.review-title {
+	font-size: 1.2rem;
+	z-index: 1;
 }
 
 .post-time-text {
@@ -1054,22 +1072,21 @@ option {
 
 .review-logo {
 	font-size: 1.3rem;
-	width: 40px;
-	height: 40px;
+	width: 35px;
+	height: 35px;
 	border: 2px solid;
 	text-align: center;
 	align-content: center;
 	border-top-color: red;
 	border-left-color: blue;
-	border-bottom-color: yellow;
-	border-right-color: green;
+	border-right-color: #ffae00;
+	border-bottom-color: green;
 	border-radius: 50%;
 	color: var(--accent-blue);
-	text-shadow: var(--text-shadow);
-	background-color: rgba(0, 0, 0, 0.6);
+
 	position: absolute;
 	right: 10px;
-	top: 3px;
+	top: -10px;
 }
 
 .review-star-container {
@@ -1078,19 +1095,25 @@ option {
 	justify-content: start;
 	padding-left: 2px;
 	color: #ffae00;
-	/* text-shadow: var(--text-shadow); */
-
+	text-shadow: var(--text-shadow);
 	column-gap: 5px;
 }
 
-/* .review-star-container > .fa-star {
-} */
-
-.patient-review {
-	color: var(--project-color-light);
-	text-shadow: var(--text-shadow);
+.review-text {
+	color: var(--project-color-dark);
 	font-size: 1rem;
 	line-height: 1.4;
+	font-weight: 600;
+	font-style: italic;
+	width: 98%;
+	text-indent: 5px;
+}
+
+footer {
+	height: 640px;
+	width: 100%;
+	background-color: var(--project-color-dark);
+	margin-top: 50px;
 }
 
 .flex-active {
