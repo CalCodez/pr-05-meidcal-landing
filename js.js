@@ -1,3 +1,4 @@
+//DOM Utility function
 const getByClass = (className) => document.getElementsByClassName(className);
 const getById = (id) => document.getElementById(id);
 const createElement = (element) => document.createElement(element);
@@ -10,24 +11,6 @@ const select = (selector) => document.querySelector(selector);
 const selectAll = (selector) => document.querySelectorAll(selector);
 const textContent = (element, text) => (element.textContent = text);
 
-//NOTE: Temp Display Toggle Section function (REMOVE ON PROJECT COMPLETE)
-const hideSection = (section) => {
-	section.style.display = 'none';
-};
-
-const heroSection = getById('hero-section');
-const servicesSection = getById('services-section');
-const patientCenterSection = getById('patient-center-section');
-const meetChiefSection = getById('meet-chiefs-section');
-const topExecContainer = getById('top-exec-section');
-
-// hideSection(heroSection);
-// hideSection(servicesSection);
-// hideSection(patientCenterSection);
-// hideSection(meetChiefSection);
-// hideSection(topExecContainer);
-//NOTE: HTML SECTIONs ^
-
 //Global Project Vars
 const click = 'click';
 const keyup = 'keyup';
@@ -35,7 +18,6 @@ const flexActive = 'flex-active';
 const flexInactive = 'flex-inactive';
 
 //Mobile Menu Vars and Functions
-
 //``Main Nav Vars
 const menuToggler = getById('menu-toggler');
 const mobileMenu = getById('mobile-menu');

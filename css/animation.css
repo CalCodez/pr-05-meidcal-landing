@@ -1,6 +1,5 @@
 .ceo-container:hover {
 	background: var(--project-color-dark);
-	/* box-shadow: 2px 2px 8px 5px var(--project-color-dark); */
 }
 
 .ceo-container:hover .ceo-dots {

@@ -25,12 +25,16 @@
 		<i id="menu-toggler" class="fa-solid fa-bars"></i>
 		<nav id="mobile-menu" class="mobile-menu container">
 			<a class="mobile-nav-links" href="#"><i class="fa-solid fa-house-medical"></i> Home</a>
-			<a class="mobile-nav-links" href="#about"><i class="fa-solid fa-circle-info"></i> Services</a>
-			<a class="mobile-nav-links" href="#doctors"><i class="fa-solid fa-sitemap"></i> Doctors</a>
-			<a class="mobile-nav-links" href="#patient-center"
-				><i class="fa-solid fa-stethoscope"></i> Patient Center</a
+			<a class="mobile-nav-links" href="#about"><i class="fa-solid fa-stethoscope"></i> Services</a>
+			<a class="mobile-nav-links" href="#doctors"
+				><i class="fa-solid fa-user-doctor"></i> Doctors</a
 			>
-			<a class="mobile-nav-links" href="#"><i class="fa-solid fa-hospital"></i>Chat Live</a>
+			<a class="mobile-nav-links" href="#patient-center"
+				><i class="fa-solid fa-user"></i> Patient Center</a
+			>
+			<a class="mobile-nav-links" href="#chat-live"
+				><i class="fa-solid fa-comment-medical"></i>Chat Live</a
+			>
 		</nav>
 
 		<div class="logo-nav-container container">
@@ -42,7 +46,7 @@
 				<a class="main-nav-links" href="#about">Services</a>
 				<a class="main-nav-links" href="#doctors"> Doctors</a>
 				<a class="main-nav-links" href="#patient-center">Patient Center</a>
-				<a class="main-nav-links" href="#"> Chat Live</a>
+				<a class="main-nav-links" href="#chat-live"> Chat Live</a>
 			</nav>
 		</div>
 
@@ -445,7 +449,9 @@
 						><i class="fa-solid fa-stethoscope"></i> Doctors</a
 					>
 					<a class="search-toggle" href="#about"><i class="fa-solid fa-hospital"></i> Services</a>
-					<a class="search-toggle" href="#"><i class="fa-solid fa-sitemap"></i> Divisions</a>
+					<a class="search-toggle" href="#chat-live"
+						><i class="fa-solid fa-comment-medical"></i> Chat Live</a
+					>
 				</div>
 				<hr class="search-hr" />
 			</div>
@@ -596,7 +602,9 @@
 				<em>Your Health, Our Priority Every Day</em>
 			</h2>
 		</div>
-		<section class="review-section">
+
+		<!-- !!Review Section -->
+		<section id="review-section" class="review-section">
 			<img src="./assets/backgrounds/medical_staff.jpg" alt=" medical staff" />
 			<div class="review-header-container">
 				<p>
@@ -746,12 +754,98 @@
 				</div>
 			</div>
 		</section>
-		<footer class="container">
-			<h2>
-				“Innovative care meets comfort, because healthcare should never be stressful, confusing,
-				uncaring, or delayed— and certainly never inconvenient. Your health is our priority. Every
-				day.”
-			</h2>
+
+		<!-- **Footer -->
+		<footer>
+			<div class="footer-wrapper container">
+				<div class="footer-nav-container container">
+					<nav class="footer-nav container">
+						<a class="footer-nav-links" href="#hero-section"
+							><i class="fa-solid fa-house-medical"></i> Home</a
+						>
+						<a class="footer-nav-links" href="#about"
+							><i class="fa-solid fa-stethoscope"></i> Services</a
+						>
+						<a class="footer-nav-links" href="#doctors"
+							><i class="fa-solid fa-user-doctor"></i> Doctors</a
+						>
+						<a class="footer-nav-links" href="#patient-center"
+							><i class="fa-solid fa-user"></i> Patient Center</a
+						>
+						<a class="footer-nav-links" href="https://www.healthcare.gov " target="_blank"
+							><i class="fa-solid fa-staff-snake"></i> Healthcare.gov</a
+						>
+
+						<a class="footer-nav-links" href="https://www.nami.org/">
+							<i class="fa-solid fa-brain"></i> Mental Health</a
+						>
+						<a class="footer-nav-links" href="https://www.heart.org/">
+							<i class="fa-solid fa-heart-pulse"></i> Heat Association</a
+						>
+						<a class="footer-nav-links" href="https://www.cancer.org/" target="_blank"
+							><i class="fa-solid fa-staff-snake"></i> Cancer Awareness</a
+						>
+					</nav>
+				</div>
+
+				<div class="container company-footer-container">
+					<div class="footer-header-container">
+						<h2>Eterna Care Medical</h2>
+					</div>
+
+					<p class="eterna-statement">
+						“Innovative care meets comfort, because healthcare should never be stressful, confusing,
+						uncaring, or delayed— and certainly never inconvenient. Your health is our priority.
+						Every day.”
+					</p>
+
+					<div class="footer-social-container">
+						<i class="fa-brands fa-facebook"></i>
+						<i class="fa-brands fa-instagram"></i>
+						<i class="fa-brands fa-x-twitter"></i>
+						<i class="fa-brands fa-threads"></i>
+					</div>
+				</div>
+
+				<div class="container chat-container">
+					<form id="chat-live" class="chat-form" action="#">
+						<input class="inputs" type="text" name="subject" placeholder="Enter Subject" />
+						<input class="inputs" type="text" placeholder="First Name" />
+
+						<textarea
+							class="inputs"
+							name="description"
+							id="description"
+							placeholder="Enter a Brief Description..."></textarea>
+
+						<button class="btn">Chat Now</button>
+					</form>
+				</div>
+			</div>
+			<div class="final-footer container">
+				<div class="container copy-rights-container">
+					<i class="fa-solid fa-copyright"></i>
+
+					<p class="copy-right-statement">
+						This Website is 100% fictional. I do not claim any rights to any of the images or logs
+						presented in this project.
+					</p>
+				</div>
+				<div class="container address-container">
+					<i class="fa-solid fa-location-dot"></i>
+					<address>
+						1234 Eterna Medical Care Dr <br />
+						Something, Special 55555
+					</address>
+
+					<p>555-555-5555</p>
+				</div>
+				<div class="container final-icons">
+					<i class="fa-brands fa-google"></i>
+					<i class="fa-brands fa-linkedin"></i>
+					<i class="fa-brands fa-youtube"></i>
+				</div>
+			</div>
 		</footer>
 	</body>
 </html>

@@ -118,6 +118,12 @@
 	.why-question-2 {
 		height: fit-content;
 	}
+
+	.review-header-container > p {
+		word-wrap: break-word;
+		hyphens: auto;
+		text-align: justify;
+	}
 }
 
 @media (max-width: 320px) {
