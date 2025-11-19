@@ -7,6 +7,7 @@
 	.healthCare-animation-container {
 		flex-direction: column;
 		height: 150px;
+		row-gap: 15px;
 	}
 
 	.nav-bar {
@@ -43,6 +44,21 @@
 	}
 	.chief-search-container {
 		display: none;
+	}
+
+	.why-question-2 {
+		text-align: center;
+	}
+
+	.footer-wrapper {
+		justify-content: space-around;
+	}
+
+	.footer-wrapper .chat-container {
+		margin-top: 30px;
+	}
+	.chat-form {
+		height: 100%;
 	}
 }
 
@@ -86,13 +102,27 @@
 	.chief-select-container {
 		justify-content: center;
 	}
-	.body-banner-text {
+	.section-banner-text {
 		font-size: 1.5rem;
 	}
 
 	.services-header-text {
 		font-size: 1.8rem;
 		text-align: center;
+	}
+	.why-eterna-header-question {
+		font-size: 2rem;
+		text-align: center;
+	}
+
+	.why-question-2 {
+		height: fit-content;
+		font-size: 1.6rem;
+	}
+
+	.exec-header {
+		text-align: center;
+		margin-top: 10px;
 	}
 
 	.search-container,
@@ -101,22 +131,23 @@
 	}
 
 	.patient-care-header-container {
-		justify-content: center;
+		justify-content: space-between;
 	}
-	.patient-center-header-text {
-		font-size: 3rem;
+	.patient-portal-spans {
+		width: 130px;
+		font-size: 1.1rem;
 	}
+
+	.patient-portal-spans > em {
+		font-size: 0.8rem;
+	}
+
+	.search-toggle {
+		height: 60px;
+	}
+
 	.patient-forms-wrapper-container {
 		gap: 60px;
-	}
-
-	.why-eterna-header-question {
-		font-size: 2rem;
-		text-align: center;
-	}
-
-	.why-question-2 {
-		height: fit-content;
 	}
 
 	.review-header-container > p {
@@ -124,10 +155,21 @@
 		hyphens: auto;
 		text-align: justify;
 	}
+
+	.footer-nav {
+		text-align: center;
+	}
+
+	.final-footer {
+		flex-direction: column;
+	}
 }
 
 @media (max-width: 320px) {
-	.body-banner-text {
+	.section-banner-container {
+		width: 310px;
+	}
+	.section-banner-text {
 		font-size: 1.1rem;
 	}
 
@@ -222,9 +264,16 @@
 	.patient-center-header-text {
 		font-size: 2.5rem;
 	}
+	.patient-forms-wrapper-container {
+		padding: 0;
+	}
+	.patient-form-container {
+		width: 100%;
+	}
 
 	.form-cover-container {
 		border-radius: 8px;
+		width: 100%;
 	}
 
 	.form-cover-header {
@@ -272,6 +321,19 @@
 	.exec-statement {
 		font-size: 16px;
 	}
+	.patient-care-header-container {
+		padding: 0;
+		justify-content: space-around;
+	}
+
+	.patient-portal-spans {
+		width: 80px;
+		font-size: 1rem;
+	}
+
+	.patient-portal-spans > em {
+		font-size: 0.6rem;
+	}
 
 	.search-heading-text {
 		width: 312px;
@@ -299,17 +361,39 @@
 		justify-content: space-around;
 		gap: 30px;
 		margin-bottom: 20px;
+		text-align: center;
 	}
 
 	.search-toggle {
-		width: 60px;
-		height: 60px;
+		width: 80px;
+		height: 80px;
 		font-size: 16px;
 		padding: 10px;
+		row-gap: 15px;
 	}
 
 	.review-card {
 		width: 310px;
 		height: 350px;
+	}
+
+	.footer-wrapper {
+		padding: 0;
+	}
+
+	.footer-wrapper .footer-nav-container {
+		width: 95%;
+	}
+
+	.footer-wrapper .company-footer-container {
+		width: 100%;
+	}
+
+	.footer-wrapper .chat-container {
+		width: 95%;
+	}
+
+	.chat-form {
+		box-shadow: none;
 	}
 }
