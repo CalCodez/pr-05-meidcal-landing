@@ -166,6 +166,10 @@
 }
 
 @media (max-width: 420px) {
+	html {
+		overflow-x: hidden;
+	}
+
 	.section-banner-container {
 		width: 100%;
 	}
