@@ -165,9 +165,9 @@
 	}
 }
 
-@media (max-width: 320px) {
+@media (max-width: 380px) {
 	.section-banner-container {
-		width: 310px;
+		width: 100%;
 	}
 	.section-banner-text {
 		font-size: 1.1rem;
